@@ -30,7 +30,7 @@
       systems = [ "x86_64-linux" ];
 
       perSystem = { pkgs, ... }: {
-        #        packages = ./packages { inherit pkgs; };
+        packages = import ./packages { inherit pkgs; };
         devShells.default = import ./lib/devshell.nix { inherit pkgs; };
       };
 
