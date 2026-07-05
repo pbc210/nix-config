@@ -15,7 +15,7 @@ let
         config.allowUnfree = true;
       };
 
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = { inherit inputs; profile = import "${inputs.self}/profile"; };
       modules = modules' ++ [ "${inputs.self}/home/desktops/${desktop}" ];
     };
 

@@ -1,6 +1,6 @@
-{...}:
+{profile, ...}:
 {
-  home.username = "pbcdev";
-  home.homeDirectory = "/home/pbcdev";
+  home.username = profile.username;
+  home.homeDirectory = "/home/${profile.username}";
   home.stateVersion = "25.11";
 }
