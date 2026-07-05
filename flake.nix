@@ -12,6 +12,8 @@
       "gvolpe-nixos.cachix.org-1:0MPlBIMwYmrNqoEaYTox15Ds2t1+3R+6Ycj0hZWMcL0="
       "helium-nix.cachix.org-1:a8YPjt9O4GPyX0u3gjg/aWpb14teU9aRiSG/MOaSFgw="
     ];
+    allow-unfree = true;
+    auto-optimise-store = true;
   };
 
   inputs = {
