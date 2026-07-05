@@ -31,7 +31,7 @@
 
       perSystem = { config, pkgs, ... }: {
         #        packages = ./packages { inherit pkgs; };
-        #        devShells.default = import ./lib/devshell.nix { inherit pkgs; };
+        devShells.default = import ./lib/devshell.nix { inherit pkgs; };
       };
 
       flake =
