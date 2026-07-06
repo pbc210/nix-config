@@ -1,4 +1,4 @@
-{ profile, ... }: {
+{ pkgs, profile, ... }: {
   programs.git = {
     enable = true;
     settings = {
@@ -13,14 +13,14 @@
       "credential \"https://github.com\"" = {
         helper = [
           ""
-          "!/usr/bin/gh auth git-credential"
+          "${pkgs.github-cli}/bin/gh auth git-credential"
         ];
       };
 
       "credential \"https://gist.github.com\"" = {
         helper = [
           ""
-          "!/usr/bin/gh auth git-credential"
+          "${pkgs.github-cli}/bin/gh auth git-credential"
         ];
       };
     };

@@ -1,0 +1,4 @@
+{
+  editor = "nvim";
+  browser = "vivaldi";
+}
