@@ -4,8 +4,8 @@ pkgs.mkShell {
   nativeBuildInputs = [
     pkgs.nixd
     pkgs.nixfmt-rfc-style
-    #    pkgs.nh
-    pkgs.home-manager
+    # pkgs.nh
+    # pkgs.home-manager
   ];
   shellHook = "";
 }
