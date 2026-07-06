@@ -53,7 +53,7 @@
         {
           overlays.default = overlays;
 
-          #nixosConfigurations = builders.mkNixos { };
+          nixosConfigurations = builders.mkNixos { };
           homeConfigurations = builders.mkHome { };
         };
     };
