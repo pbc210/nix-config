@@ -1,4 +1,6 @@
 rec {
+  stateVersion = "26.05";
+
   name = "PBCDev";
   userName = "pbcdev";
 

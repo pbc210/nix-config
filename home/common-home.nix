@@ -2,7 +2,7 @@
 {
   home.username = profile.username;
   home.homeDirectory = profile.homeDir;
-  home.stateVersion = "26.05";
+  home.stateVersion = profile.stateVersion;
 
   imports = [
     "${inputs.self}/home/programs"
