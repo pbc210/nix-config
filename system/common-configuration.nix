@@ -2,6 +2,6 @@
   imports = [
     ./programs
     ./services
-    ./configs/users.nix
+    ./modules/users.nix
   ];
 }
