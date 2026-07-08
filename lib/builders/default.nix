@@ -4,7 +4,7 @@
       inputs' ? inputs,
       overlays' ? overlays,
     }:
-    import ./lib/mkNixos.nix {
+    import ./mkNixos.nix {
       inputs = inputs';
       overlays = overlays';
     };

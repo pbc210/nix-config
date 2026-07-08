@@ -40,19 +40,19 @@
         formatter = pkgs.nixpkgs-fmt-tree;
 
         packages = import ./packages { inherit pkgs; };
-        devShells.default = import ./lib/devshell.nix { inherit pkgs; };
+        devShells.default = import ./modules/devshell.nix { inherit pkgs; };
       };
 
       flake =
         let
           overlays = import ./overlays;
-          builders = import ./lib/builders.nix { inherit inputs overlays; };
+          lib = import ./lib { inherit inputs overlays; };
         in
         {
           overlays.default = overlays;
 
-          nixosConfigurations = builders.mkNixos { };
-          homeConfigurations = builders.mkHome { };
+          nixosConfigurations = lib.builders.mkNixos { };
+          homeConfigurations = lib.builders.mkHome { };
         };
     };
 }
