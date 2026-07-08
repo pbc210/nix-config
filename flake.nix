@@ -26,6 +26,8 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+
+    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 
   outputs =
@@ -45,7 +47,7 @@
 
       flake =
         let
-          overlays = import ./overlays;
+          overlays = import ./overlays { inherit inputs; };
           lib = import ./lib { inherit inputs overlays; };
         in
         {
