@@ -1,6 +1,6 @@
 { profile, inputs, ... }:
 {
-  home.username = profile.username;
+  home.username = profile.userName;
   home.homeDirectory = profile.homeDir;
   home.stateVersion = profile.stateVersion;
 
