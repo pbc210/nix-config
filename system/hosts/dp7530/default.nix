@@ -1,12 +1,10 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   boot = {
     kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
-    initrd.systemd.enable = true;
-    loader.systemd-boot = {
+    loader.systemd-boot.enable = false;
+
+    lanzaboote = {
       enable = true;
-      configurationLimit = 10;
-      editor = false;
     };
-    efi.canTouchEfiVariables = true;
   };
 }
