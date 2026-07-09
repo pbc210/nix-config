@@ -22,6 +22,7 @@ let
       extraSpecialArgs = {
         inherit inputs;
         profile = import "${inputs.self}/profile";
+        libx = import "${inputs.self}/lib"; # lib extension
       };
       modules = modules' ++ extraModules ++ [ "${desktopsDir}/${desktop}" ];
     };
