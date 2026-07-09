@@ -33,6 +33,11 @@
       url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -62,7 +67,9 @@
             extraModules = [ inputs.lanzaboote.nixosModules.lanzaboote ];
           };
 
-          homeConfigurations = lib.builders.mkHome { };
+          homeConfigurations = lib.builders.mkHome {
+            extraModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
+          };
         };
     };
 }
