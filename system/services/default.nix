@@ -3,5 +3,6 @@
     ./NetworkManager
     ./iwd
     ./systemd-resolved
+    ./pipewire
   ];
 }
