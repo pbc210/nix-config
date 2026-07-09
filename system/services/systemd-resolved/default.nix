@@ -2,7 +2,6 @@
 {
   services.resolved = {
     enable = true;
-    dnssec = "allow-downgrade";
     settings = {
       Resolve = {
         DNSSEC = "allow-downgrade";
