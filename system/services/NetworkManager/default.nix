@@ -1,4 +1,4 @@
-{profile, ...}:
+{ profile, ... }:
 {
   networking.networkmanager = {
     enable = true;

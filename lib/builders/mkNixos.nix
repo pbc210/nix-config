@@ -1,4 +1,8 @@
-{ inputs, overlays, extraModules }:
+{
+  inputs,
+  overlays,
+  extraModules,
+}:
 let
   hosts-x86_64-linux = [ "dp7530" ];
 
@@ -22,17 +26,20 @@ let
         profile = import "${inputs.self}/profile";
       };
 
-      modules = modules' ++ extraModules ++ [
-        "${hostsDir}/${host}"
-        {
-          networking.hostName = "nixos-${host}";
+      modules =
+        modules'
+        ++ extraModules
+        ++ [
+          "${hostsDir}/${host}"
+          {
+            networking.hostName = "nixos-${host}";
 
-          nixpkgs = {
-            inherit overlays;
-            config.allowUnfree = true;
-          };
-        }
-      ];
+            nixpkgs = {
+              inherit overlays;
+              config.allowUnfree = true;
+            };
+          }
+        ];
     };
 
   mk-x86_64-linux = host: {
