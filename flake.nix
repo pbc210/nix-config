@@ -66,21 +66,30 @@
       flake =
         let
           overlays = import ./overlays { inherit inputs; };
-          lib = import ./lib { inherit inputs overlays; };
+          libx = import ./lib { inherit inputs overlays; };
+
+          extraModulesHome = [ inputs.plasma-manager.homeModules.plasma-manager ];
+          extraModulesNixos = [
+            inputs.lanzaboote.nixosModules.lanzaboote
+            inputs.home-manager.nixosModules.home-manager
+          ];
         in
         {
           overlays.default = overlays;
 
-          nixosConfigurations = lib.builders.mkNixos {
+          nixosConfigurations = libx.builders.mkNixos {
             extraModules = [
-              inputs.lanzaboote.nixosModules.lanzaboote
-              inputs.home-manager.nixosModules.home-manager
-            ];
+              {
+                # Embed Home Manager into Nixos
+                home-manager = libx.builders.mkHome {
+                  extraModules = extraModulesHome;
+                  embed = true;
+                };
+              }
+            ] ++ extraModulesNixos;
           };
 
-          homeConfigurations = lib.builders.mkHome {
-            extraModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
-          };
+          homeConfigurations = libx.builders.mkHome { extraModules = extraModulesHome; };
         };
     };
 }

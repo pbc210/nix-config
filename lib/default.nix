@@ -1,4 +1,4 @@
 { overlays, inputs }:
 {
-  builders = import ./builders { inherit overlays inputs; };
+  builders = import ./builders.nix { inherit overlays inputs; };
 }
