@@ -11,6 +11,7 @@ let
 
   desktops = [
     "tty"
+    "plasma6"
   ];
   systems = [ "x86_64-linux" ];
   systemPriority = "x86_64-linux";
