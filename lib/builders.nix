@@ -70,9 +70,9 @@ let
     in
     # If it's the preferred (primary) architecture, omit the operating system suffix for a shorter Host/Desktop name.
     if (system == systemPriority) then
-      { "${host}-${desktop}" = mk; }
+      { "${host}-${desktop}" = nixpkgs.lib.nixosSystem mk; }
     else
-      { "${host}-${desktop}-${system}" = mk; };
+      { "${host}-${desktop}-${system}" = nixpkgs.lib.nixosSystem mk; };
 
   # ==================== Home-Manager ====================
 
@@ -96,12 +96,15 @@ let
         extraSpecialArgs = homeSpecialArgs;
         pkgs = import nixpkgs {
           inherit overlays system;
-          config  .allowUnfree = true;
+          config.allowUnfree = true;
         };
         modules = (mkHomeModules { inherit desktop extraModules; });
       };
     in
-    if (system == systemPriority) then { ${desktop} = mk; } else { "${desktop}-${system}" = mk; };
+    if (system == systemPriority) then
+      { ${desktop} = inputs.home-manager.lib.homeManagerConfiguration mk; }
+    else
+      { "${desktop}-${system}" = inputs.home-manager.lib.homeManagerConfiguration mk; };
 in
 {
   mkNixos =
@@ -124,12 +127,11 @@ in
             }
           )
           (
-            nixpkgs.lib.cartesianProductOfSets {
+            nixpkgs.lib.cartesianProduct {
               desktop = desktops;
               host = hosts.${system};
             }
           )
-
       ) systems
     );
 
@@ -144,7 +146,12 @@ in
         useGlobalPkgs = true;
         useUserPackages = true;
         users.${profile.userName} = { osConfig, ... }: {
-          imports = (mkHomeModules { inherit extraModules; desktop = osConfig._desktop; });
+          imports = (
+            mkHomeModules {
+              inherit extraModules;
+              desktop = osConfig._desktop;
+            }
+          );
         };
       }
     else
