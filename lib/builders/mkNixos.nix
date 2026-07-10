@@ -24,7 +24,7 @@ let
       specialArgs = {
         inherit inputs;
         profile = import "${inputs.self}/profile";
-        libx = import "${inputs.self}/lib";
+        libx = import "${inputs.self}/lib" { inherit inputs overlays; };
       };
 
       modules =

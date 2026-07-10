@@ -2,7 +2,7 @@
   inputs,
   overlays,
   extraModules,
-  embed ? false # This flag is only used when embedding home-manager into nixos instead of using it as a standalone unit.
+  embed ? false, # This flag is only used when embedding home-manager into nixos instead of using it as a standalone unit.
 }:
 let
   desktopsDir = "${inputs.self}/home/desktops";
@@ -23,7 +23,7 @@ let
       extraSpecialArgs = {
         inherit inputs;
         profile = import "${inputs.self}/profile";
-        libx = import "${inputs.self}/lib"; # lib extension
+        libx = import "${inputs.self}/lib" { inherit inputs overlays; }; # lib extension
       };
       modules = modules' ++ extraModules ++ [ "${desktopsDir}/${desktop}" ];
     };
@@ -40,7 +40,5 @@ let
   };
 in
 inputs.nixpkgs.lib.mergeAttrsList (
-  if ! embed
-  then map mk-x86_64-linux desktops
-  else map mk-x86_64-linux-for-nixos desktops
+  if !embed then map mk-x86_64-linux desktops else map mk-x86_64-linux-for-nixos desktops
 )
