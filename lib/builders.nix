@@ -52,7 +52,7 @@ let
             # Create a hidden option to transfer Desktop environment information (DE/WM) from NixOS
             # to the Home Manager module (when using embedded mode).
             options._desktop = lib.mkOption {
-              type = lib.types.str;
+              type = lib.types.enum desktops;
               description = "This helps Home Manager identify the target desktop";
             };
             config = {
