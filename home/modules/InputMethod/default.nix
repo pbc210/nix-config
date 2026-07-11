@@ -8,4 +8,5 @@
       fcitx5-gtk
     ];
   };
+  home.file.".config/fcitx5/config".source = ./fcitx5.conf;
 }
