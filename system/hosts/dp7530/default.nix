@@ -9,6 +9,10 @@
     };
   };
 
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
   host-config = {
     gpuDrivers = [ "intel" ];
     useDesktop = true;
