@@ -4,6 +4,6 @@
     ./bluetooth
     ./options
     ./networking
-    ./libs-list
+    ./ldLibraries
   ];
 }

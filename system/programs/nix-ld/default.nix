@@ -2,6 +2,6 @@
 {
   programs.nix-ld = {
     enable = true;
-    libraries = config.libs-list;
+    libraries = config.ldLibraries;
   };
 }

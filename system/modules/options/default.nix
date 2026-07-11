@@ -1,6 +1,6 @@
 {
   imports = [
     ./host-config.nix
-    ./libs-list.nix
+    ./ldLibraries.nix
   ];
 }
