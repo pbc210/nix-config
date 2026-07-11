@@ -4,5 +4,6 @@
     ./iwd
     ./systemd-resolved
     ./pipewire
+    ./envfs
   ];
 }
