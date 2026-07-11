@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./firefox
+    ./firefox-de
     ./fzf
     ./gh
     ./git
