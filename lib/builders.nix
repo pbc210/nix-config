@@ -43,7 +43,7 @@ let
     }:
     let
       mk = {
-        inherit system;
+        # inherit system; # TODO: Handling deprecation warnings
         specialArgs = nixosSpecialArgs;
 
         modules = [
