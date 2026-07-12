@@ -53,6 +53,8 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs =

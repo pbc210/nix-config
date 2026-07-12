@@ -9,7 +9,7 @@
     ./nix-helper
     # ./nvim
     ./starship
-    # ./vscode
+    ./vscode
     ./zoxide
     ./zsh
   ];
