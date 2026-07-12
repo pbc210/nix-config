@@ -5,7 +5,7 @@
     ./iwd
     ./NetworkManager
     # ./nginx
-    # ./nix-daemon
+    ./nix-daemon
     # ./openssh
     ./pipewire
     ./sddm
