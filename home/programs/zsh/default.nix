@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, config, ...}:
 {
   programs.zsh = {
     enable = true;
@@ -25,6 +25,12 @@
         };
       }
     ];
+
+    shellAliases = {
+      cd = "z";
+    };
+
+    dotDir = "${config.xdg.configHome}/zsh";
 
     oh-my-zsh = import ./oh-my-zsh;
     initContent = builtins.readFile ./init.zsh;
