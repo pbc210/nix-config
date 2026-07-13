@@ -4,6 +4,7 @@
     ./caddy
     ./envfs
     ./iwd
+    ./kanata
     ./NetworkManager
     ./nginx
     ./nix-daemon
