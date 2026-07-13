@@ -1,6 +1,7 @@
 {
   imports = [
     ./blueman
+    ./caddy
     ./envfs
     ./iwd
     ./NetworkManager

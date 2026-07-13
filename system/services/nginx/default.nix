@@ -1,6 +1,6 @@
 {
   services.nginx = {
-    enable = true;
+    enable = false;
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
   };
