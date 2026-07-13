@@ -1,4 +1,4 @@
-{ profile, ... }:
+{ profile, pkgs, ... }:
 {
   system.stateVersion = profile.stateVersion;
 
@@ -11,4 +11,6 @@
     ./modules
     ./flatpak
   ];
+
+  environment.systemPackages = [ pkgs.mkcert ];
 }
