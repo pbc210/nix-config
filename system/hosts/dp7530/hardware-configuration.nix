@@ -39,7 +39,7 @@
     {
       device = "/dev/disk/by-uuid/10f022b5-943f-47c3-8e2c-588bda93f425";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd:3" "noatime" "ssd" "discard=async" "space_cache=v2" ];
+      options = [ "subvol=@nix" "compress-force=zstd:3" "noatime" "ssd" "discard=async" "space_cache=v2" ];
     };
 
   fileSystems."/home" =
