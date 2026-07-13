@@ -22,6 +22,7 @@
       "workbench.iconTheme" = "material-icon-theme";
 
       "files.autoSave" = "afterDelay";
+      "git.autofetch" = true;
     };
   };
   };
