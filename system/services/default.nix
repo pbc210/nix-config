@@ -10,7 +10,7 @@
     ./pipewire
     ./sddm
     ./systemd-resolved
-    # ./vaultwarden
+    ./vaultwarden
     ./xserver
   ];
 }
