@@ -11,7 +11,10 @@
       }
     ];
 
-    packages = [ ];
+    packages = [
+      "com.valvesoftware.Steam"
+      "com.vivaldi.Vivaldi"
+    ];
   };
 
   xdg.portal = {
