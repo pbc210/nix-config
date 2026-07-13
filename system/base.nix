@@ -9,5 +9,6 @@
     ./programs
     ./services
     ./modules
+    ./flatpak
   ];
 }

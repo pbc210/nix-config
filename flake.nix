@@ -25,7 +25,8 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # system
+
+    # ==================== system ====================
 
     cachyos-kernel = {
       url = "github:xddxdd/nix-cachyos-kernel/release";
@@ -37,7 +38,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # home
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/v0.7.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # ==================== home ====================
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -90,6 +96,7 @@
           extraModulesNixos = [
             inputs.lanzaboote.nixosModules.lanzaboote
             inputs.home-manager.nixosModules.home-manager
+            inputs.nix-flatpak.nixosModules.nix-flatpak
           ];
         in
         {
