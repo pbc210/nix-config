@@ -15,6 +15,7 @@
       "com.valvesoftware.Steam"
       "com.vivaldi.Vivaldi"
       "com.wps.Office"
+      "com.bitwarden.desktop"
     ];
   };
 
