@@ -4,7 +4,7 @@
     ./envfs
     ./iwd
     ./NetworkManager
-    # ./nginx
+    ./nginx
     ./nix-daemon
     # ./openssh
     ./pipewire
