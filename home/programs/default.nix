@@ -1,7 +1,7 @@
 {
   imports = [
     ./fastfetch
-    ./firefox-de
+    ./firefox
     ./fzf
     ./gh
     ./git
