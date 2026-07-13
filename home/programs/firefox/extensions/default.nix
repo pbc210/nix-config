@@ -4,6 +4,8 @@ let
     ublock-origin
     tridactyl
     darkreader
+    youtube-nonstop
+    enhancer-for-youtube
   ];
 in
 {

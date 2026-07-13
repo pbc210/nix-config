@@ -7,12 +7,15 @@
       id = 0;
       name = profile.userName;
       isDefault = true;
-      extensions = import ./extensions.nix { inherit pkgs; };
+      extensions = import ./extensions { inherit pkgs; };
 
-      settings = {
-        "extensions.autoDisableScopes" = 0;
-        "extensions.enabledScopes" = 15;
-      };
+      settings = import ./settings.nix;
+    };
+
+    policies = {
+      DisableAppUpdate = false;
+      AppUpdateURL = "https://aus5.mozilla.org/update/6/%PRODUCT%/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%SYSTEM_CAPABILITIES%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml";
+      AutomaticallyDownloadSandboxModules = true;
     };
   };
 }
