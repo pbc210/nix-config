@@ -20,7 +20,10 @@ let
   desktopsDir = "${rootDir}/home/desktops";
 
   profile = import "${rootDir}/profile";
+
   libx = import "${rootDir}/lib"; # my lib extension
+  libxHome = import "${rootDir}/home/lib";
+  # libxNixos = import "${rootDir}/system/lib";
 
   # ==================== Nixos ====================
 
@@ -74,7 +77,7 @@ let
     "${rootDir}/home/base.nix"
   ];
 
-  homeSpecialArgs = { inherit inputs profile libx; };
+  homeSpecialArgs = { inherit inputs profile libx libxHome; };
 
   mkHomeModules =
     { desktop, extraModules }: homeModules ++ extraModules ++ [ "${desktopsDir}/${desktop}" ];
