@@ -10,5 +10,6 @@ rec {
     less = pager;
     nano = editor;
     grep = "rg";
+    find = "fd";
   };
 }

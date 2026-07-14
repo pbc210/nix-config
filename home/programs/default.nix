@@ -3,6 +3,7 @@
     ./bat
     ./eza
     ./fastfetch
+    ./fd
     ./firefox
     ./fzf
     ./gh
