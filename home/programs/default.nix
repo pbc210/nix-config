@@ -11,6 +11,7 @@
     ./kitty
     ./nix-helper
     # ./nvim
+    ./ripgrep
     ./starship
     ./vscode
     ./zoxide

@@ -26,7 +26,7 @@
       }
     ];
 
-    shellAliases = { inherit (settings.tools.alias) cd cat less nano; };
+    shellAliases = { inherit (settings.tools.alias) cd cat less nano grep; };
 
     dotDir = "${config.xdg.configHome}/zsh";
 

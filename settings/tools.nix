@@ -9,5 +9,6 @@ rec {
     cat = "bat";
     less = pager;
     nano = editor;
+    grep = "rg";
   };
 }
