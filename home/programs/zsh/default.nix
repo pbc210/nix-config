@@ -39,4 +39,5 @@
   programs.zoxide.enableZshIntegration = true;
   programs.fzf.enableZshIntegration = true;
   programs.starship.enableZshIntegration = true;
+  programs.eza.enableZshIntegration = true;
 }

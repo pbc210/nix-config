@@ -1,5 +1,6 @@
 {
   imports = [
+    ./eza
     ./fastfetch
     ./firefox
     ./fzf
