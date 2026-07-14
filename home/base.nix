@@ -1,8 +1,8 @@
-{ profile, inputs, ... }:
+{ settings, inputs, ... }:
 {
-  home.username = profile.userName;
-  home.homeDirectory = profile.homeDir;
-  home.stateVersion = profile.stateVersion;
+  home.username = settings.userName;
+  home.homeDirectory = settings.homeDir;
+  home.stateVersion = settings.stateVersion;
 
   imports = [
     "${inputs.self}/home/programs"

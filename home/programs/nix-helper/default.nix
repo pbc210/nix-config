@@ -1,11 +1,11 @@
-{ profile, ... }:
+{ settings, ... }:
 {
   programs.nh = {
     enable = true;
 
-    flake = "${profile.nixConfigDir}";
+    flake = "${settings.nixConfigDir}";
   };
   home.sessionVariables = {
-    NH_HOME_FLAKE = "${profile.nixConfigDir}";
+    NH_HOME_FLAKE = "${settings.nixConfigDir}";
   };
 }

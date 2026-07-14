@@ -1,9 +1,9 @@
-{ profile, pkgs, ... }:
+{ settings, pkgs, ... }:
 {
-  system.stateVersion = profile.stateVersion;
+  system.stateVersion = settings.stateVersion;
 
-  time.timeZone = profile.timeZone;
-  i18n.defaultLocale = profile.locale;
+  time.timeZone = settings.timeZone;
+  i18n.defaultLocale = settings.locale;
 
   imports = [
     ./programs

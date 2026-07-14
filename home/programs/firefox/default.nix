@@ -1,11 +1,11 @@
-{ pkgs, profile, ... }:
+{ pkgs, settings, ... }:
 {
   programs.firefox = {
     enable = true;
     #package = pkgs.firefox-devedition;
-    profiles.${profile.userName} = {
+    profiles.${settings.userName} = {
       id = 0;
-      name = profile.userName;
+      name = settings.userName;
       isDefault = true;
       extensions = import ./extensions { inherit pkgs; };
 

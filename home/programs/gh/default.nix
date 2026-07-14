@@ -1,14 +1,14 @@
-{ profile, ... }: {
+{ settings, ... }: {
   programs.gh = {
     enable = true;
     settings = {
       version = 1;
       git_protocol = "https";
-      editor = profile.defaultTools.editor;
+      editor = settings.defaultTools.editor;
       prompt = "enabled";
       prefer_editor_prompt = "disabled";
       pager = "cat";
-      browser = profile.defaultTools.browser;
+      browser = settings.defaultTools.browser;
 
       color_labels = "disabled";
       accessible_colors = "disabled";

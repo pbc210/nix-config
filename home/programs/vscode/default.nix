@@ -1,8 +1,8 @@
-{ pkgs, profile, inputs, ... }:
+{ pkgs, settings, inputs, ... }:
 {
   programs.vscode = {
     enable = true;
-    profiles.${profile.userName} = {
+    profiles.${settings.userName} = {
       extensions = with inputs.vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
         diegoulloao.neofusion-theme
         pkief.material-icon-theme

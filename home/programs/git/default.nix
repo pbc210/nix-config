@@ -1,10 +1,10 @@
-{ pkgs, profile, ... }: {
+{ pkgs, settings, ... }: {
   programs.git = {
     enable = true;
     settings = {
       user = {
-        name = profile.name;
-        email = profile.email.main;
+        name = settings.name;
+        email = settings.email.main;
       };
       init = {
         defaultBranch = "main";

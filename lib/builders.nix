@@ -19,7 +19,7 @@ let
   desktopsDir-nixos = "${rootDir}/system/desktops";
   desktopsDir = "${rootDir}/home/desktops";
 
-  profile = import "${rootDir}/profile";
+  settings = import "${rootDir}/settings";
 
   libx = import "${rootDir}/lib"; # my lib extension
   libxHome = import "${rootDir}/home/lib";
@@ -33,7 +33,7 @@ let
   ];
 
   nixosSpecialArgs = {
-    inherit inputs profile libx;
+    inherit inputs settings libx;
   };
 
   mkNixos-base =
@@ -77,7 +77,7 @@ let
     "${rootDir}/home/base.nix"
   ];
 
-  homeSpecialArgs = { inherit inputs profile libx libxHome; };
+  homeSpecialArgs = { inherit inputs settings libx libxHome; };
 
   mkHomeModules =
     { desktop, extraModules }: homeModules ++ extraModules ++ [ "${desktopsDir}/${desktop}" ];
@@ -139,7 +139,7 @@ in
         extraSpecialArgs = homeSpecialArgs;
         useGlobalPkgs = true;
         useUserPackages = true;
-        users.${profile.userName} = { osConfig, ... }: {
+        users.${settings.userName} = { osConfig, ... }: {
           imports = (
             mkHomeModules {
               inherit extraModules;
