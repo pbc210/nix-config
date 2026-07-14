@@ -6,5 +6,6 @@
     "dotnet"
     "node"
     "npm"
+    "zoxide"
   ];
 }
