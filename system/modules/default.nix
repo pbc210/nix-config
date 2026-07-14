@@ -1,9 +1,10 @@
 {
   imports = [
-    ./users
     ./bluetooth
-    ./options
-    ./networking
     ./ldLibraries
+    ./networking
+    ./options
+    ./security
+    ./users
   ];
 }
