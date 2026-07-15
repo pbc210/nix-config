@@ -33,6 +33,35 @@
         "editor.fontSize" = settings.fonts.code.size;
         "editor.fontFamily" = settings.fonts.code.name;
       };
+
+      keybindings = [
+        {
+          key = "alt+a";
+          command = "workbench.action.quickOpen";
+        }
+        {
+          key = "alt+s";
+          command = "workbench.action.closeActiveEditor";
+        }
+        {
+          key = "alt+d";
+          command = "workbench.action.quickOpenNavigateNextInEditorPicker";
+          when = "inEditorsPicker";
+        }
+        {
+          key = "alt+d";
+          command = "workbench.action.showAllEditors";
+        }
+        {
+          key = "alt+f";
+          command = "workbench.action.quickOpenNavigatePreviousInEditorPicker";
+          when = "inEditorsPicker";
+        }
+        {
+          key = "alt+f";
+          command = "workbench.action.showAllEditors";
+        }
+      ];
     };
   };
 }
