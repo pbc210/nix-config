@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       user = {
-        name = settings.profile.name;
-        email = settings.profile.email.main;
+        name = settings.identity.name;
+        email = settings.identity.email.main;
       };
       init = {
         defaultBranch = "main";

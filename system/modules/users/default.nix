@@ -1,5 +1,5 @@
 { pkgs, settings, ... }: {
-  users.users.${settings.profile.username} = {
+  users.users.${settings.identity.username} = {
     isNormalUser = true;
     description = "user main";
     extraGroups = [

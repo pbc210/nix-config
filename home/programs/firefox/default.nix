@@ -3,9 +3,9 @@
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
-    profiles.${settings.profile.username} = {
+    profiles.${settings.identity.username} = {
       id = 0;
-      name = settings.profile.username;
+      name = settings.identity.username;
       isDefault = true;
       extensions = import ./extensions { inherit pkgs; };
 
@@ -22,5 +22,5 @@
     };
   };
 
-  home.file.".config/mozilla/firefox/${settings.profile.username}/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
+  home.file.".config/mozilla/firefox/${settings.identity.username}/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
 }

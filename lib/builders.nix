@@ -139,7 +139,7 @@ in
         extraSpecialArgs = homeSpecialArgs;
         useGlobalPkgs = true;
         useUserPackages = true;
-        users.${settings.profile.username} = { osConfig, ... }: {
+        users.${settings.identity.username} = { osConfig, ... }: {
           imports = (
             mkHomeModules {
               inherit extraModules;

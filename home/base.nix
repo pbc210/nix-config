@@ -1,6 +1,6 @@
 { settings, inputs, pkgs, ... }:
 {
-  home.username = settings.profile.username;
+  home.username = settings.identity.username;
   home.homeDirectory = settings.dirs.home;
   home.stateVersion = settings.stateVersion;
 

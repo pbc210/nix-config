@@ -2,7 +2,7 @@
 {
   nix.settings = {
     auto-optimise-store = true;
-    trusted-users = [ "root" settings.profile.username ];
+    trusted-users = [ "root" settings.identity.username ];
 
     trusted-substituters = [
       "https://nix-community.cachix.org"

@@ -4,13 +4,13 @@ rec {
   timeZone = "Asia/Ho_Chi_Minh";
   locale = "en_US.UTF-8";
 
-  profile = import ./profile.nix;
+  identity = import ./identity.nix;
   keybind = import ./keybind.nix;
   tools = import ./tools.nix;
   network = import ./network.nix;
 
   dirs = {
-    home = "/home/${profile.username}";
+    home = "/home/${identity.username}";
     nixConfig = "${dirs.home}/nix-config";
   };
 
