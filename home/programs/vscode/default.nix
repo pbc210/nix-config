@@ -13,6 +13,7 @@
         brettm12345.nixfmt-vscode
         editorconfig.editorconfig
         vancoding.vscode-treefmt-nix
+        mkhl.direnv
       ];
 
       userSettings = {
