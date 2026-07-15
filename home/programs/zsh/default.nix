@@ -38,4 +38,5 @@
   programs.fzf.enableZshIntegration = true;
   programs.starship.enableZshIntegration = true;
   programs.eza.enableZshIntegration = true;
+  programs.direnv.enableZshIntegration = true;
 }
