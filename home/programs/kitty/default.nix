@@ -3,8 +3,8 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = settings.font;
-      size = 9;
+      name = settings.fonts.terminal.name;
+      size = settings.fonts.terminal.size;
     };
 
     settings = {
