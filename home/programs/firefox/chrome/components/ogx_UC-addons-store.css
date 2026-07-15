@@ -4,8 +4,8 @@
 @media (prefers-color-scheme: dark) {
   /*= Addons.org =============================================================*/
 
-  @-moz-document url-prefix("https://addons.mozilla.org") {
-
+  @-moz-document url-prefix("https://addons.mozilla.org")
+  {
     :host,
     :root {
       --color-accent-primary: var(--general-color) !important;
@@ -15,12 +15,22 @@
       --in-content-deemphasized-text: rgb(91, 91, 102);
       --in-content-box-background: #fff;
       --in-content-box-background-odd: rgba(12, 12, 13, 0.05); /* grey 90 a05 */
-      --in-content-box-border-color: color-mix(in srgb, currentColor 41%, transparent);
+      --in-content-box-border-color: color-mix(
+        in srgb,
+        currentColor 41%,
+        transparent
+      );
       --in-content-box-info-background: #f0f0f4;
-      --in-content-item-hover: color-mix(in srgb, var(--in-content-primary-button-background) 20%, transparent);
+      --in-content-item-hover: color-mix(
+        in srgb,
+        var(--in-content-primary-button-background) 20%,
+        transparent
+      );
       --in-content-item-hover-text: var(--in-content-page-color);
       --in-content-item-selected: var(--in-content-primary-button-background);
-      --in-content-item-selected-text: var(--in-content-primary-button-text-color);
+      --in-content-item-selected-text: var(
+        --in-content-primary-button-text-color
+      );
       --in-content-icon-color: rgb(91, 91, 102);
       --in-content-accent-color: #0a84ff;
       --in-content-accent-color-active: #0060df;
@@ -39,14 +49,18 @@
       --in-content-button-background-hover: rgba(207, 207, 216, 0.66);
       --in-content-button-background-active: rgb(207, 207, 216);
       --in-content-primary-button-text-color: rgb(251, 251, 254);
-      --in-content-primary-button-text-color-hover: var(--in-content-primary-button-text-color);
+      --in-content-primary-button-text-color-hover: var(
+        --in-content-primary-button-text-color
+      );
       --in-content-primary-button-background: #0061e0;
       --in-content-primary-button-background-hover: #0250bb;
       --in-content-primary-button-background-active: #053e94;
       --in-content-danger-button-background: #e22850;
       --in-content-danger-button-background-hover: #c50042;
       --in-content-danger-button-background-active: #810220;
-      --in-content-focus-outline-color: var(--in-content-primary-button-background);
+      --in-content-focus-outline-color: var(
+        --in-content-primary-button-background
+      );
       /* Note: 1px smaller than we want because we have a 1px transparent border. */
       /* Once proton ships, these can probably stop being variables. */
       --in-content-button-border-radius: 4px;
@@ -56,7 +70,9 @@
       --in-content-table-border-color: var(
         --in-content-box-border-color
       ); /* Legacy: #d1d1d1; rgba(249, 249, 250, 0.2) */
-      --in-content-table-border-dark-color: var(--in-content-table-border-color);
+      --in-content-table-border-dark-color: var(
+        --in-content-table-border-color
+      );
       --in-content-table-header-background: var(
         --in-content-primary-button-background
       ); /* Legacy: #0a84ff; rgb(5, 64, 150); */
@@ -67,13 +83,21 @@
       --dialog-warning-text-color: var(--red-60);
       --checkbox-border-color: var(--in-content-box-border-color);
       --checkbox-unchecked-bgcolor: var(--in-content-button-background);
-      --checkbox-unchecked-hover-bgcolor: var(--in-content-button-background-hover);
-      --checkbox-unchecked-active-bgcolor: var(--in-content-button-background-active);
+      --checkbox-unchecked-hover-bgcolor: var(
+        --in-content-button-background-hover
+      );
+      --checkbox-unchecked-active-bgcolor: var(
+        --in-content-button-background-active
+      );
       --checkbox-checked-bgcolor: var(--in-content-primary-button-background);
       --checkbox-checked-color: var(--in-content-primary-button-text-color);
       --checkbox-checked-border-color: transparent;
-      --checkbox-checked-hover-bgcolor: var(--in-content-primary-button-background-hover);
-      --checkbox-checked-active-bgcolor: var(--in-content-primary-button-background-active);
+      --checkbox-checked-hover-bgcolor: var(
+        --in-content-primary-button-background-hover
+      );
+      --checkbox-checked-active-bgcolor: var(
+        --in-content-primary-button-background-active
+      );
       --blue-40: #45a1ff;
       --blue-50: #0a84ff;
       --blue-60: #0060df;
@@ -109,7 +133,8 @@
       --card-padding: 16px;
       --card-shadow: var(--shadow-10);
       --card-outline-color: var(--grey-30);
-      --card-shadow-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color);
+      --card-shadow-hover:
+        var(--card-shadow), 0 0 0 5px var(--card-outline-color);
       --uc-warning-icon-bgcolor: #ffa436;
     }
     @media (prefers-color-scheme: dark) {
@@ -132,18 +157,30 @@
         --in-content-icon-color: rgb(251, 251, 254);
         --in-content-primary-button-text-color: rgb(43, 42, 51);
         --in-content-primary-button-background: var(--general-color);
-        --in-content-primary-button-background-hover: var(--color-accent-primary-hover);
-        --in-content-primary-button-background-active: var(--color-accent-primary-active);
+        --in-content-primary-button-background-hover: var(
+          --color-accent-primary-hover
+        );
+        --in-content-primary-button-background-active: var(
+          --color-accent-primary-active
+        );
         --in-content-danger-button-background: #ff848b;
         --in-content-danger-button-background-hover: #ffbdc5;
         --in-content-danger-button-background-active: #ffdfe7;
         --in-content-table-background: rgb(35, 34, 43);
-        --in-content-table-border-dark-color: var(--in-content-box-border-color);
+        --in-content-table-border-dark-color: var(
+          --in-content-box-border-color
+        );
         --in-content-accent-color: var(--in-content-primary-button-background);
-        --in-content-accent-color-active: var(--in-content-primary-button-background-hover);
+        --in-content-accent-color-active: var(
+          --in-content-primary-button-background-hover
+        );
         --in-content-link-color: var(--in-content-primary-button-background);
-        --in-content-link-color-hover: var(--in-content-primary-button-background-hover);
-        --in-content-link-color-active: var(--in-content-primary-button-background-active);
+        --in-content-link-color-hover: var(
+          --in-content-primary-button-background-hover
+        );
+        --in-content-link-color-active: var(
+          --in-content-primary-button-background-active
+        );
         --in-content-link-color-visited: var(--in-content-link-color);
         --card-outline-color: var(--grey-60);
         --dialog-warning-text-color: var(--red-40);
@@ -180,16 +217,19 @@
     }
     @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
       :root {
-        --menuitem-hover-background-color: var(--dark-menuitem-hover-background-color);
+        --menuitem-hover-background-color: var(
+          --dark-menuitem-hover-background-color
+        );
         --menu-background-color: var(--dark-menu-background-color);
         --menu-color: var(--dark-menu-color);
-        --menuitem-disabled-hover-background-color: var(--dark-menuitem-disabled-hover-background-color);
+        --menuitem-disabled-hover-background-color: var(
+          --dark-menuitem-disabled-hover-background-color
+        );
         --menu-disabled-color: var(--dark-menu-disabled-color);
         --menu-border-color: var(--dark-menu-border-color);
         --menu-icon-opacity: var(--dark-menu-icon-opacity);
       }
     }
-    
 
     /* Basic */
     .Page-content,
@@ -321,7 +361,10 @@
       background: var(--in-content-primary-button-background-hover) !important;
     }
     .ShowMoreCard-contents::after {
-      background: linear-gradient(hsla(0deg, 0%, 100%, 0), var(--in-content-table-background)) !important;
+      background: linear-gradient(
+        hsla(0deg, 0%, 100%, 0),
+        var(--in-content-table-background)
+      ) !important;
     }
     input,
     textarea,
@@ -331,7 +374,9 @@
     .Card-header,
     .Card-contents,
     .CardList ul > li,
-    .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:is(:focus, :hover),
+    .AddonsCard--horizontal
+      ul.AddonsCard-list
+      .SearchResult-wrapper:is(:focus, :hover),
     .Paginate,
     .LandingPage-header,
     .DropdownMenu-items,
@@ -399,15 +444,21 @@
       border: 1px solid var(--in-content-table-background) !important;
     }
     .AutoSearchInput-query:is(:hover, :focus),
-    .UserProfileEditNotifications .UserProfileEditNotification-input:checked ~ .UserProfileEditNotification-checkbox {
+    .UserProfileEditNotifications
+      .UserProfileEditNotification-input:checked
+      ~ .UserProfileEditNotification-checkbox {
       border-color: var(--in-content-primary-button-background) !important;
     }
     .UserProfileEdit input:focus,
     .UserProfileEdit textarea:focus,
     .AutoSearchInput-query:focus,
-    .UserProfileEditNotifications .UserProfileEditNotification-input:focus ~ .UserProfileEditNotification-checkbox {
-      box-shadow: inset 0 0 0 1px var(--in-content-primary-button-background),
-        0 0 0 1px var(--in-content-primary-button-background), 0 0 0 4px rgba(0, 211, 255, 0.3) !important;
+    .UserProfileEditNotifications
+      .UserProfileEditNotification-input:focus
+      ~ .UserProfileEditNotification-checkbox {
+      box-shadow:
+        inset 0 0 0 1px var(--in-content-primary-button-background),
+        0 0 0 1px var(--in-content-primary-button-background),
+        0 0 0 4px rgba(0, 211, 255, 0.3) !important;
     }
     .PromotedBadge-link--line {
       border-color: var(--in-content-deemphasized-text) !important;
@@ -515,7 +566,11 @@
     body:is(.developer-hub, .statistics) .dashboard .listing .item,
     body:is(.developer-hub, .statistics) .dashboard .listing .item:hover h5,
     body:is(.developer-hub, .statistics) .secondary .addon-status,
-    body:is(.developer-hub, .statistics) .secondary .addon-status .addon-details li.addon-listed-status,
+    body:is(.developer-hub, .statistics)
+      .secondary
+      .addon-status
+      .addon-details
+      li.addon-listed-status,
     body:is(.developer-hub, .statistics) #refine-results h5,
     body:is(.developer-hub, .statistics) .island.criteria li,
     body:is(.developer-hub, .statistics) .two-up div {
@@ -524,11 +579,23 @@
     body:is(.developer-hub, .statistics) .item-actions h5,
     body:is(.developer-hub, .statistics) .item-actions > ul,
     body:is(.developer-hub, .statistics) .item-actions > ul > li,
-    body:is(.developer-hub, .statistics) .dashboard .listing .item .item-actions a,
+    body:is(.developer-hub, .statistics)
+      .dashboard
+      .listing
+      .item
+      .item-actions
+      a,
     body:is(.developer-hub, .statistics) .edit-media-details,
     body:is(.developer-hub, .statistics) .devhub-form table th,
-    body:is(.developer-hub, .statistics) #recent-activity .listing .item .timestamp,
-    body:is(.developer-hub, .statistics) #upload-file .upload-status #uploadstatus,
+    body:is(.developer-hub, .statistics)
+      #recent-activity
+      .listing
+      .item
+      .timestamp,
+    body:is(.developer-hub, .statistics)
+      #upload-file
+      .upload-status
+      #uploadstatus,
     body:is(.developer-hub, .statistics) #addon-validator-suite,
     body:is(.developer-hub, .statistics) #addon-validator-suite .msg > *,
     body:is(.developer-hub, .statistics) .island.criteria li a.inactive {
@@ -542,8 +609,15 @@
     body:is(.developer-hub, .statistics) .submission-type-tabs a,
     body:is(.developer-hub, .statistics) .popup a,
     body:is(.developer-hub, .statistics) .dashboard .listing .item:hover a,
-    body:is(.developer-hub, .statistics) .dashboard .listing .item:hover .item-actions a,
-    body:is(.developer-hub, .statistics) #upload-status-results.status-pass strong,
+    body:is(.developer-hub, .statistics)
+      .dashboard
+      .listing
+      .item:hover
+      .item-actions
+      a,
+    body:is(.developer-hub, .statistics)
+      #upload-status-results.status-pass
+      strong,
     body:is(.developer-hub, .statistics) #addon-validator-suite a,
     body:is(.developer-hub, .statistics) #create-addon a,
     body:is(.developer-hub, .statistics) .html-support {
@@ -552,9 +626,24 @@
     body:is(.developer-hub, .statistics) .dashboard .listing .item:hover a {
       color: var(--in-content-link-color-hover) !important;
     }
-    body:is(.developer-hub, .statistics) .dashboard .listing .item .item-info .downloads,
-    body:is(.developer-hub, .statistics) .dashboard .listing .item .item-info .price,
-    body:is(.developer-hub, .statistics) .dashboard .listing .item .item-info .users {
+    body:is(.developer-hub, .statistics)
+      .dashboard
+      .listing
+      .item
+      .item-info
+      .downloads,
+    body:is(.developer-hub, .statistics)
+      .dashboard
+      .listing
+      .item
+      .item-info
+      .price,
+    body:is(.developer-hub, .statistics)
+      .dashboard
+      .listing
+      .item
+      .item-info
+      .users {
       color: var(--green-60) !important;
     }
     body:is(.developer-hub, .statistics) .status-admin-disabled b,
@@ -572,9 +661,14 @@
     body:is(.developer-hub, .statistics) #icons_default,
     body:is(.developer-hub, .statistics) .listing .item,
     body:is(.developer-hub, .statistics) .object-lead,
-    body:is(.developer-hub, .statistics) #addon-validator-suite .results .tier-results,
+    body:is(.developer-hub, .statistics)
+      #addon-validator-suite
+      .results
+      .tier-results,
     body:is(.developer-hub, .statistics) #addon-validator-suite .suite,
-    body:is(.developer-hub, .statistics) #addon-validator-suite .suite-container {
+    body:is(.developer-hub, .statistics)
+      #addon-validator-suite
+      .suite-container {
       border-color: var(--in-content-border-color) !important;
       background: var(--in-content-box-background) !important;
     }
@@ -594,7 +688,11 @@
     body:is(.developer-hub, .statistics) #head-chart text {
       fill: var(--in-content-deemphasized-text) !important;
     }
-    body:is(.developer-hub, .statistics) #head-chart .highcharts-legend .highcharts-legend-item:hover text {
+    body:is(.developer-hub, .statistics)
+      #head-chart
+      .highcharts-legend
+      .highcharts-legend-item:hover
+      text {
       fill: var(--in-content-page-color) !important;
       paint-order: stroke !important;
       stroke: var(--in-content-page-color) !important;
@@ -603,11 +701,11 @@
       stroke-linejoin: miter !important;
     }
     body:is(.developer-hub, .statistics)
-    #head-chart
-    .highcharts-legend
-    .highcharts-legend-item
-    path[stroke="#CCC"]
-    ~ text {
+      #head-chart
+      .highcharts-legend
+      .highcharts-legend-item
+      path[stroke="#CCC"]
+      ~ text {
       fill: #ccc !important;
     }
     body:is(.developer-hub, .statistics) #icons_default li a:hover,
@@ -622,7 +720,9 @@
     }
     body:is(.developer-hub, .statistics) a.remove:hover,
     body:is(.developer-hub, .statistics) span.tip:hover {
-      background-color: var(--in-content-primary-button-background-hover) !important;
+      background-color: var(
+        --in-content-primary-button-background-hover
+      ) !important;
     }
     body:is(.developer-hub, .statistics) .submission-type-tabs a,
     body:is(.developer-hub, .statistics) .devhub-sidebar,
@@ -634,8 +734,12 @@
     body:is(.developer-hub, .statistics) #main-wrapper {
       border-color: var(--in-content-page-background) !important;
     }
-    body:is(.developer-hub, .statistics) .item-actions a.more-actions:hover:after,
-    body:is(.developer-hub, .statistics) .item-actions button.link.more-actions:hover:after,
+    body:is(.developer-hub, .statistics)
+      .item-actions
+      a.more-actions:hover:after,
+    body:is(.developer-hub, .statistics)
+      .item-actions
+      button.link.more-actions:hover:after,
     body:is(.developer-hub, .statistics) #change-locale::after {
       border-top-color: var(--in-content-link-color) !important;
     }
@@ -681,33 +785,73 @@
     body:is(.developer-hub, .statistics) a.delete-button.delete-addon,
     body:is(.developer-hub, .statistics) button,
     body:is(.developer-hub, .statistics) button.button,
-    body:is(.developer-hub, .statistics) input:not(.upvotes):not(.downvotes)[type="submit"] {
+    body:is(.developer-hub, .statistics)
+      input:not(.upvotes):not(.downvotes)[type="submit"] {
       color: var(--in-content-primary-button-text-color) !important;
       background: var(--in-content-primary-button-background) !important;
     }
-    body:is(.developer-hub, .statistics) #promos .view-button a:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) #upload-file-finish.button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) #upload-file-widget .button.prominent:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .cta a.button:link:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .cta a.button:visited:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .linux .button.linux:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .mac .button.mac:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .other .button.bsd:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .other .button.solaris:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .sidebar a.button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .sidebar button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .theme .choices button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .theme-queue a.button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .theme-queue button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) .windows .button.windows:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) a.button:link:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) a.button:visited:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) a.delete-button.delete-addon:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) button:is(.selected, :focus, :hover),
-    body:is(.developer-hub, .statistics) button.button:is(.selected, :focus, :hover),
     body:is(.developer-hub, .statistics)
-    input:not(.upvotes):not(.downvotes)[type="submit"]:is(.selected, :focus, :hover) {
+      #promos
+      .view-button
+      a:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      #upload-file-finish.button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      #upload-file-widget
+      .button.prominent:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics) .button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .cta
+      a.button:link:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .cta
+      a.button:visited:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .linux
+      .button.linux:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .mac
+      .button.mac:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .other
+      .button.bsd:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .other
+      .button.solaris:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .sidebar
+      a.button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .sidebar
+      button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .theme
+      .choices
+      button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .theme-queue
+      a.button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .theme-queue
+      button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      .windows
+      .button.windows:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      a.button:link:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      a.button:visited:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      a.delete-button.delete-addon:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics) button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      button.button:is(.selected, :focus, :hover),
+    body:is(.developer-hub, .statistics)
+      input:not(.upvotes):not(.downvotes)[type="submit"]:is(
+        .selected,
+        :focus,
+        :hover
+      ) {
       background: var(--in-content-primary-button-background-hover) !important;
     }
     body:is(.developer-hub, .statistics) .edit_with_prefix span,
@@ -718,7 +862,10 @@
       padding-block: 3px !important;
       cursor: not-allowed;
     }
-    body:is(.developer-hub, .statistics) .devhub-form .item_wrapper input[type="email"] {
+    body:is(.developer-hub, .statistics)
+      .devhub-form
+      .item_wrapper
+      input[type="email"] {
       appearance: none !important;
       padding: 2px 5px;
       border: 1px solid;
@@ -733,7 +880,7 @@
       background-color: var(--in-content-button-background) !important;
       background: var(--in-content-table-background) !important;
     }
-    
+
     /* ________ My Little changes ________
     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
 
@@ -760,39 +907,64 @@
     /* Various font color */
 
     body,
-    h1, h2,
+    h1,
+    h2,
     .SearchResult-summary,
     .SearchResult--meta-section,
-    .Button--neutral, .Button--neutral:link,
+    .Button--neutral,
+    .Button--neutral:link,
     .UserReview-reply-header,
     .Badge,
     .Badge .Badge-link,
     .Header a:not(:hover),
     .Footer a,
-    .Button--action, .Button--action:link {
+    .Button--action,
+    .Button--action:link {
       color: var(--my-card-color) !important;
     }
 
     .Definition-dt,
     .UserReview-byLine,
-    .UserReview-byLine a, .UserReview-byLine a:link, .UserReview-byLine a:visited,
+    .UserReview-byLine a,
+    .UserReview-byLine a:link,
+    .UserReview-byLine a:visited,
     .SecondaryHero,
-    .Home-SubjectShelf-link:link, .Home-SubjectShelf-link:visited,
-    .RatingsByStar-row, a.RatingsByStar-row {
+    .Home-SubjectShelf-link:link,
+    .Home-SubjectShelf-link:visited,
+    .RatingsByStar-row,
+    a.RatingsByStar-row {
       color: var(--my-card-color2) !important;
     }
 
     /* Accent color font when 'hover' - tested in main addons page */
-    .Home-SubjectShelf-link:active, .Home-SubjectShelf-link:focus, .Home-SubjectShelf-link:hover,
-    .SecondaryHero-message-link, .SecondaryHero-message-link:active, .SecondaryHero-message-link:hover, 
-    .SecondaryHero-message-link:link, .SecondaryHero-message-link:visited, .SecondaryHero-module-link, 
-    .SecondaryHero-module-link:active, .SecondaryHero-module-link:hover, .SecondaryHero-module-link:link, 
+    .Home-SubjectShelf-link:active,
+    .Home-SubjectShelf-link:focus,
+    .Home-SubjectShelf-link:hover,
+    .SecondaryHero-message-link,
+    .SecondaryHero-message-link:active,
+    .SecondaryHero-message-link:hover,
+    .SecondaryHero-message-link:link,
+    .SecondaryHero-message-link:visited,
+    .SecondaryHero-module-link,
+    .SecondaryHero-module-link:active,
+    .SecondaryHero-module-link:hover,
+    .SecondaryHero-module-link:link,
     .SecondaryHero-module-link:visited,
-    .Card-footer-link a, .Card-footer-link a:active, .Card-footer-link a:hover, .Card-footer-link a:link, 
-    .Card-footer-link a:visited, .Card-footer-text a, .Card-footer-text a:active, .Card-footer-text a:hover, 
-    .Card-footer-text a:link, .Card-footer-text a:visited, .Card-shelf-footer-in-header a, 
-    .Card-shelf-footer-in-header a:active, .Card-shelf-footer-in-header a:hover, 
-    .Card-shelf-footer-in-header a:link, .Card-shelf-footer-in-header a:visited {
+    .Card-footer-link a,
+    .Card-footer-link a:active,
+    .Card-footer-link a:hover,
+    .Card-footer-link a:link,
+    .Card-footer-link a:visited,
+    .Card-footer-text a,
+    .Card-footer-text a:active,
+    .Card-footer-text a:hover,
+    .Card-footer-text a:link,
+    .Card-footer-text a:visited,
+    .Card-shelf-footer-in-header a,
+    .Card-shelf-footer-in-header a:active,
+    .Card-shelf-footer-in-header a:hover,
+    .Card-shelf-footer-in-header a:link,
+    .Card-shelf-footer-in-header a:visited {
       color: var(--general-color) !important;
     }
 
@@ -815,7 +987,6 @@
       fill: red !important;
     }
 
-
     /* Various background */
     .Card-contents,
     .AddonsByAuthorsCard.AddonsCard--horizontal .Card-contents .AddonsCard-list,
@@ -828,9 +999,9 @@
     }
 
     /* Addon tittle */
-    .SearchResult-link, 
-    .SearchResult-link:active, 
-    .SearchResult-link:link, 
+    .SearchResult-link,
+    .SearchResult-link:active,
+    .SearchResult-link:link,
     .SearchResult-link:visited {
       color: var(--my-card-color) !important;
     }
@@ -839,11 +1010,11 @@
       color: var(--general-color) !important;
     }
 
-    .Paginate .Button.Paginate-item:first-child, 
-    .Paginate .Button.Paginate-item:last-child, 
-    .Paginate .Button.Paginate-item:link:first-child, 
-    .Paginate .Button.Paginate-item:link:last-child, 
-    .Paginate .Button.Paginate-item:visited:first-child, 
+    .Paginate .Button.Paginate-item:first-child,
+    .Paginate .Button.Paginate-item:last-child,
+    .Paginate .Button.Paginate-item:link:first-child,
+    .Paginate .Button.Paginate-item:link:last-child,
+    .Paginate .Button.Paginate-item:visited:first-child,
     .Paginate .Button.Paginate-item:visited:last-child {
       color: var(--my-card-color) !important;
     }
@@ -853,7 +1024,8 @@
     }
 
     /* Hover background on 'page' numbers | anterior 1 2 3 siguiente | */
-    .Paginate .Button.Paginate-item:active, .Paginate .Button.Paginate-item:hover {
+    .Paginate .Button.Paginate-item:active,
+    .Paginate .Button.Paginate-item:hover {
       background-color: var(--my-card-bgcolor1) !important;
     }
 
@@ -886,11 +1058,11 @@
     }
 
     /* 'hover' button */
-    .Button--neutral.Button--micro:not(.Button--disabled):hover, 
+    .Button--neutral.Button--micro:not(.Button--disabled):hover,
     .Button--neutral:not(.Button--disabled):hover {
       background-color: var(--color-accent-primary-hover) !important;
     }
-    
+
     /* Accent color in various main backgrounds */
     .Header,
     .Footer {
@@ -903,7 +1075,10 @@
     .HeroRecommendation-color-ink-80-color-green-70,
     .HeroRecommendation-color-ink-80-color-violet-70 {
       background: #1c1b22 !important;
-      background-image: linear-gradient(var(--color-accent-primary-xsmall) 20%, #05409650) !important;
+      background-image: linear-gradient(
+        var(--color-accent-primary-xsmall) 20%,
+        #05409650
+      ) !important;
     }
   }
 }
