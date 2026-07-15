@@ -9,8 +9,9 @@
     "${inputs.self}/home/services"
     "${inputs.self}/home/modules"
   ];
-  
+
   home.packages = [
     pkgs.nixd
+    pkgs.treefmt
   ];
 }
