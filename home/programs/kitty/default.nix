@@ -25,76 +25,45 @@
 
       background_opacity = "0.85";
 
-      # The basic colors
-      foreground = "#CDD6F4";
-      background = "#1E1E2E";
-      selection_foreground = "#1E1E2E";
-      selection_background = "#F5E0DC";
+background = "#070f1c";
+    foreground = "#e0d9c7";
 
-      # Cursor colors
-      cursor = "#F5E0DC";
-      cursor_text_color = "#1E1E2E";
+    cursor = "#e0d9c7";
 
-      # URL underline color when hovering with mouse
-      url_color = "#B4BEFE";
+    selection_foreground = "#050539";
+    selection_background = "#f2e5c8";
 
-      # Kitty window border colors
-      active_border_color = "#CBA6F7";
-      inactive_border_color = "#8E95B3";
-      bell_border_color = "#EBA0AC";
+    # Black / Grey
+    color0 = "#0e0807";
+    color8 = "#2f516c";
 
-      # OS Window titlebar colors
-      wayland_titlebar_color = "system";
-      macos_titlebar_color = "system";
+    # Red
+    color1 = "#ea6847";
+    color9 = "#d943a8";
 
-      # Tab bar colors
-      active_tab_foreground = "#11111B";
-      active_tab_background = "#CBA6F7";
-      inactive_tab_foreground = "#CDD6F4";
-      inactive_tab_background = "#181825";
-      tab_bar_background = "#11111B";
+    # Green
+    color2 = "#ea6847";
+    color10 = "#616d33";
 
-      # Colors for marks (marked text in the terminal)
-      mark1_foreground = "#1E1E2E";
-      mark1_background = "#87B0F9";
-      mark2_foreground = "#1E1E2E";
-      mark2_background = "#CBA6F7";
-      mark3_foreground = "#1E1E2E";
-      mark3_background = "#74C7EC";
+    # Yellow
+    color3 = "#5db2f8";
+    color11 = "#86dbf5";
 
-      # The 16 terminal colors
+    # Blue
+    color4 = "#2f516c";
+    color12 = "#5db2f8";
 
-      # black
-      color0 = "#43465A";
-      color8 = "#43465A";
+    # Magenta
+    color5 = "#d943a8";
+    color13 = "#d943a8";
 
-      # red
-      color1 = "#F38BA8";
-      color9 = "#F38BA8";
+    # Cyan
+    color6 = "#86dbf5";
+    color14 = "#ea6847";
 
-      # green
-      color2 = "#A6E3A1";
-      color10 = "#A6E3A1";
-
-      # yellow
-      color3 = "#F9E2AF";
-      color11 = "#F9E2AF";
-
-      # blue
-      color4 = "#87B0F9";
-      color12 = "#87B0F9";
-
-      # magenta
-      color5 = "#F5C2E7";
-      color13 = "#F5C2E7";
-
-      # cyan
-      color6 = "#94E2D5";
-      color14 = "#94E2D5";
-
-      # white
-      color7 = "#CDD6F4";
-      color15 = "#A1A8C9";
+    # White
+    color7 = "#e0d9c7";
+    color15 = "#e0d9c7";
     };
   };
 }
