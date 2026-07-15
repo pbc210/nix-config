@@ -89,11 +89,14 @@
           overlays = import ./overlays { inherit inputs; };
           libx = import ./lib { inherit inputs overlays; };
 
-          extraModulesHome = [ inputs.plasma-manager.homeModules.plasma-manager ];
+          extraModulesHome = [
+            inputs.plasma-manager.homeModules.plasma-manager
+            inputs.nix-flatpak.homeManagerModules.nix-flatpak
+          ];
+
           extraModulesNixos = [
             inputs.lanzaboote.nixosModules.lanzaboote
             inputs.home-manager.nixosModules.home-manager
-            inputs.nix-flatpak.nixosModules.nix-flatpak
           ];
         in
         {

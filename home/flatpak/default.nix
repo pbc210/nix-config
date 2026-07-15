@@ -1,8 +1,5 @@
-{ pkgs, ... }:
 {
   services.flatpak = {
-    enable = true;
-
     uninstallUnmanaged = true;
     remotes = [
       {
@@ -18,11 +15,5 @@
       "com.bitwarden.desktop"
       "com.usebottles.bottles"
     ];
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "*";
   };
 }

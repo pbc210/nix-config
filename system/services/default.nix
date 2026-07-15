@@ -3,6 +3,7 @@
     ./blueman
     ./caddy
     ./envfs
+    ./flatpak
     ./iwd
     ./kanata
     ./NetworkManager

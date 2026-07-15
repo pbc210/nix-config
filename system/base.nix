@@ -9,7 +9,6 @@
     ./programs
     ./services
     ./modules
-    ./flatpak
   ];
 
   environment.systemPackages = [ pkgs.mkcert ];

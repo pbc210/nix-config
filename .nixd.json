@@ -1,0 +1,10 @@
+{
+  "options": {
+    "nixos": {
+      "expr": "let configs = (builtins.getFlake \"/home/pbcdev/nix-config\").nixosConfigurations; in configs.dp7530-plasma6.options"
+    },
+    "home-manager": {
+      "expr": "let configs = (builtins.getFlake \"/home/pbcdev/nix-config\").homeConfigurations.plasma6.options"
+    }
+  }
+}
