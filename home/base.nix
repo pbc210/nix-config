@@ -1,4 +1,4 @@
-{ settings, inputs, ... }:
+{ settings, inputs, pkgs, ... }:
 {
   home.username = settings.profile.username;
   home.homeDirectory = settings.dirs.home;
@@ -8,5 +8,9 @@
     "${inputs.self}/home/programs"
     "${inputs.self}/home/services"
     "${inputs.self}/home/modules"
+  ];
+  
+  home.packages = [
+    pkgs.nixd
   ];
 }
