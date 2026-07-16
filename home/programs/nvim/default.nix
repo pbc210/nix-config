@@ -22,4 +22,8 @@
       undofile = true;
     };
   };
+
+  imports = [
+    ./keymaps.nix
+  ];
 }
