@@ -2,7 +2,7 @@
 {
   nix.settings = {
     auto-optimise-store = true;
-    trusted-users = [ "root" settings.identity.username ];
+    trusted-users = [ settings.identity.username ];
     experimental-features = [ "nix-command" "flakes" ];
 
     trusted-substituters = [
