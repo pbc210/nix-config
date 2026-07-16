@@ -1,39 +1,41 @@
 {
   programs.nixvim.keymaps = [
+
+    # ========== Clipboard ==========
     {
       mode = "v";
       key = "<C-c>";
-      action = "\"+y";
+      action = "<CMD>lua vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('\"+y', true, false, true), 'n', false)<CR>";
       options = {
         silent = true;
-        desc = "Copy to clipboard";
+        desc = "Copy selection to system clipboard";
       };
     }
 
     {
       mode = "n";
       key = "<C-v>";
-      action = "\"+p";
+      action = "<CMD>put +<CR>";
       options = {
         silent = true;
-        desc = "Paste from clipboard";
+        desc = "Paste from system clipboard";
       };
     }
 
     {
       mode = "i";
       key = "<C-v>";
-      action = "<C-r>+";
+      action = "<CMD>lua vim.api.nvim_put({vim.fn.getreg('+')}, 'c', true, true)<CR>";
       options = {
         silent = true;
-        desc = "Paste from clipboard in insert mode";
+        desc = "Paste from system clipboard in insert mode";
       };
     }
 
     {
       mode = "v";
       key = "<C-v>";
-      action = "\"+p";
+      action = "<CMD>lua vim.api.nvim_feedkeys('d', 'x', false); vim.api.nvim_put({vim.fn.getreg('+')}, 'c', true, true)<CR>";
       options = {
         silent = true;
         desc = "Paste and replace selection";
@@ -43,10 +45,30 @@
     {
       mode = "v";
       key = "<C-x>";
-      action = "\"+d";
+      action = "<CMD>lua vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('\"+d', true, false, true), 'n', false)<CR>";
       options = {
         silent = true;
-        desc = "Cut selection to clipboard";
+        desc = "Cut selection to system clipboard";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<A-e>";
+      action = "<CMD>undo<CR>";
+      options = {
+        silent = true;
+        desc = "Undo changes safely";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<A-r>";
+      action = "<CMD>redo<CR>";
+      options = {
+        silent = true;
+        desc = "Redo changes safely";
       };
     }
   ];
