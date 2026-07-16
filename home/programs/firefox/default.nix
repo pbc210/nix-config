@@ -22,5 +22,5 @@
     };
   };
 
-  home.file.".config/mozilla/firefox/${settings.identity.username}/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
+  xdg.configFile."mozilla/firefox/${settings.identity.username}/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
 }

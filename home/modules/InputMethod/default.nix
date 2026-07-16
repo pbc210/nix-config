@@ -10,5 +10,5 @@
     ];
     fcitx5.waylandFrontend = true;
   };
-  home.file.".config/fcitx5/config".source = ./fcitx5.conf;
+  xdg.configFile."fcitx5/config".source = ./fcitx5.conf;
 }
