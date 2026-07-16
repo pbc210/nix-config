@@ -7,7 +7,7 @@
 
   imports = [
     ./options.nix
-    ./keymaps.nix
+    ./keymaps
     ./plugins
     ./ui
   ];

@@ -1,7 +1,5 @@
 {
   programs.nixvim.keymaps = [
-
-    # ========== Clipboard ==========
     {
       mode = "v";
       key = "<C-c>";
@@ -49,26 +47,6 @@
       options = {
         silent = true;
         desc = "Cut selection to system clipboard";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<A-e>";
-      action = "<CMD>undo<CR>";
-      options = {
-        silent = true;
-        desc = "Undo changes safely";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<A-r>";
-      action = "<CMD>redo<CR>";
-      options = {
-        silent = true;
-        desc = "Redo changes safely";
       };
     }
   ];
