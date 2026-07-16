@@ -1,5 +1,6 @@
 {programsDir, ...}: {
   imports = [
+    "${programsDir}/atuin"
     "${programsDir}/bat"
     "${programsDir}/direnv"
     "${programsDir}/eza"
