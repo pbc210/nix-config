@@ -8,5 +8,6 @@
   imports = [
     ./options.nix
     ./keymaps.nix
+    ./ui
   ];
 }
