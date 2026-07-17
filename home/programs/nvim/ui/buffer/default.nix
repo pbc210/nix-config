@@ -24,4 +24,5 @@
       diagnostics = "nvim_lsp";
     };
   };
+  imports = [ ./telescope.nix ];
 }
