@@ -10,5 +10,6 @@
     ./keymaps
     ./plugins
     ./ui
+    ./languages
   ];
 }

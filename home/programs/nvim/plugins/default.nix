@@ -9,4 +9,8 @@
       plenary-nvim
     ];
   };
+
+  imports = [
+    ./cmp.nix
+  ];
 }
