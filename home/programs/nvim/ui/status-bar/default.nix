@@ -1,3 +1,4 @@
+{settings, ...}:
 {
   programs.nixvim.plugins = {
     lualine = {
@@ -7,37 +8,81 @@
         options = {
           theme = "auto";
 
-          componentSeparators = { left = "|"; right = "|"; };
-          sectionSeparators = { left = ""; right = ""; };
+          icons_enabled = true;
+
+          component_separators = { left = ""; right = ""; };
+          section_separators = { left = ""; right = ""; };
 
           globalstatus = true;
+
+          refresh = {
+            statusline = 1000;
+            tabline = 1000;
+            winbar = 1000;
+          };
         };
 
-        lualine_a = [ "mode" ];
+        sections = {
 
-        lualine_b = [ "branch" "diff" ];
+          lualine_a = [ "mode" ];
 
-        lualine_c = [
-          {
-            __unkeyed-1 = "filename";
-            file_status = true;
-            path = 1;
-          }
-        ];
+          lualine_b = [
+            {
+              __unkeyed-1 = "branch";
+              icon = settings.glyphs.git.branch.icon;
+            }
 
-        lualine_x = [
-          {
-            __unkeyed-1 = "diagnostics";
-            sources = [ "nvim_diagnostic" ];
-            symbols = { error = " "; warn = " "; info = "󰋼 "; hint = " "; };
-          }
-          "encoding"
-          "fileformat"
-          "filetype"
-        ];
+            {
+              __unkeyed-1 = "diff";
+              symbols = {
+                added = settings.glyphs.git.diff.added;
+                modified = settings.glyphs.git.diff.modified;
+                removed = settings.glyphs.git.diff.removed;
+              };
+            }
+          ];
 
-        lualine_y = [ "progress" ];
-        lualine_z = [ "location" ];
+          lualine_c = [
+            {
+              __unkeyed-1 = "filename";
+              file_status = true;
+              path = 1;
+            }
+
+            {
+              __unkeyed-1 = "diagnostics";
+              sources = [ "nvim_diagnostic" ];
+              symbols = { error = settings.glyphs.level.error; warn = settings.glyphs.level.warning; info = settings.glyphs.level.info; hint = settings.glyphs.level.hint; };
+            }
+          ];
+
+          lualine_x = [
+            "encoding"
+            "filetype"
+          ];
+
+          lualine_y = [ {
+            __unkeyed-1 = "lsp_status";
+
+            fmt = ''
+              function()
+                local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+                local clients = vim.lsp.get_clients({ bufnr = 0 })
+                if next(clients) == nil then
+                  return 'No LSP'
+                end
+                local client_names = {}
+                for _, client in ipairs(clients) do
+                  table.insert(client_names, client.name)
+                end
+                return table.concat(client_names, ', ')
+              end
+            '';
+
+            icon = settings.glyphs.lsp.icon;
+          } ];
+          lualine_z = [ "progress" "location" ];
+        };
       };
     };
   };

@@ -14,13 +14,21 @@
       untracked = "󰰧 ";
       conflict = "󰰰 ";
     };
+
+    branch = {
+      icon = " ";
+    };
   };
 
   level = {
     error = " ";
     warning = " ";
-    infor = "󰋽 ";
+    info = "󰋽 ";
     hint = " ";
+  };
+
+  lsp = {
+    icon = " ";
   };
 
   prompt = " ";

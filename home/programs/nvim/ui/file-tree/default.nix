@@ -60,4 +60,5 @@
       };
     };
   };
+  programs.nixvim.plugins.lualine.settings.extensions = [ "neo-tree" ];
 }
