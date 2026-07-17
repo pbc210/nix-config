@@ -9,5 +9,16 @@
         desc = "Toggle Neo-tree sidebar";
       };
     }
+
+    {
+      mode = "n";
+      key = "q";
+      action = "<cmd>Neotree toggle<CR>";
+      options.silent = true;
+    }
   ];
+
+  programs.nixvim.plugins.neo-tree.settings.filesystem.window.mappings = {
+    "<esc>" = "close_window";
+  };
 }
