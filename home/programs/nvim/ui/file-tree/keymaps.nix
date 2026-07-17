@@ -17,8 +17,4 @@
       options.silent = true;
     }
   ];
-
-  programs.nixvim.plugins.neo-tree.settings.filesystem.window.mappings = {
-    "<esc>" = "close_window";
-  };
 }

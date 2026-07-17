@@ -1,26 +1,5 @@
 {
   programs.nixvim.keymaps = [
-    # bufferline.nvim is disable
-    # {
-    #   mode = "n";
-    #   key = "<A-d>";
-    #   action = "<CMD>BufferLineCycleNext<CR>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Cycle to next buffer (Ctrl+Tab behavior)";
-    #   };
-    # }
-
-    # {
-    #   mode = "n";
-    #   key = "<A-f>";
-    #   action = "<CMD>BufferLineCyclePrev<CR>";
-    #   options = {
-    #     silent = true;
-    #     desc = "Cycle to previous buffer (Ctrl+Shift+Tab behavior)";
-    #   };
-    # }
-
     {
       mode = "n";
       key = "<A-f>";
@@ -65,25 +44,4 @@
       };
     }
   ];
-
-
-  programs.nixvim.plugins.telescope = {
-    keymaps = {
-      "<A-a>" = "find_files";
-    };
-
-    settings.defaults.mappings.i = {
-      "<Esc>" = {
-        __raw = "require('telescope.actions').close";
-      };
-
-      "<A-j>" = {
-        __raw = "require('telescope.actions').move_selection_next";
-      };
-
-      "<A-k>" = {
-        __raw = "require('telescope.actions').move_selection_previous";
-      };
-    };
-  };
 }

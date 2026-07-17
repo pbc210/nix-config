@@ -14,7 +14,23 @@
           height = 0.9;
           preview_width = 0.6;
         };
+
+        mappings.i = {
+          "<Esc>" = {
+            __raw = "require('telescope.actions').close";
+          };
+
+          "<A-j>" = {
+            __raw = "require('telescope.actions').move_selection_next";
+          };
+
+          "<A-k>" = {
+            __raw = "require('telescope.actions').move_selection_previous";
+          };
+        };
       };
     };
+
+    keymaps = { "<A-a>" = "find_files"; };
   };
 }
