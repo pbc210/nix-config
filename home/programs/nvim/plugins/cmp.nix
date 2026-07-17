@@ -1,0 +1,105 @@
+{lib, settings, ...}:
+{
+  programs.nixvim.plugins = {
+    luasnip.enable = true;
+    lspkind.enable = true;
+
+    cmp = {
+      enable = true;
+      autoEnableSources = true;
+
+      settings = {
+        snippet.expand = ''
+          function(args)
+            require('luasnip').lsp_expand(args.body)
+          end
+        '';
+
+        performance = {
+          max_view_entries = 30;
+        };
+
+        window = {
+          completion = {
+            side_padding = 1;
+            border = settings.glyphs.border;
+            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+          };
+
+          settings.documentation = {
+            border = settings.glyphs.border;
+            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+          };
+        };
+
+        mapping = {
+          "<A-u>" = ''
+            cmp.mapping(function()
+              if cmp.visible() then
+                cmp.abort()
+              else
+                cmp.complete()
+              end
+            end, { "i", "c" })
+          '';
+
+          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-k>" = "cmp.mapping.scroll_docs(4)";
+
+          "<CR>" = "cmp.mapping.confirm({ select = false })";
+
+          "<Tab>" = ''
+            cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_next_item()
+              elseif require("luasnip").expand_or_jumpable() then
+                require("luasnip").expand_or_jump()
+              else
+                fallback()
+              end
+            end, { "i", "s" })
+          '';
+
+          "<S-Tab>" = ''
+            cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_prev_item()
+              elseif require("luasnip").jumpable(-1) then
+                require("luasnip").jump(-1)
+              else
+                fallback()
+              end
+            end, { "i", "s" })
+          '';
+        };
+
+        sources = [
+          { name = "nvim_lsp"; priority = 1000; }
+          { name = "luasnip";  priority = 750; }
+          { name = "buffer";   priority = 500; }
+          { name = "path";     priority = 250; }
+        ];
+
+        formatting = {
+          fields = [ "icon" "abbr" "kind" "menu" ];
+          format = lib.mkForce ''
+            require('lspkind').cmp_format({
+              maxwidth = {
+                menu = 50,
+                abbr = 50,
+              },
+              ellipsis_char = '...',
+              show_labelDetails = true,
+              before = function (entry, vim_item)
+                if vim_item.kind then
+                  vim_item.kind = "   (" .. vim_item.kind .. ")"
+                end
+                return vim_item
+              end
+            })
+          '';
+        };
+      };
+    };
+  };
+}
