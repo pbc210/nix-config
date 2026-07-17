@@ -31,10 +31,10 @@
             sources = [ "nvim_diagnostic" ];
             symbols = { error = " "; warn = " "; info = "󰋼 "; hint = " "; };
           }
-            "encoding"
-            "fileformat"
-            "filetype"
-          ];
+          "encoding"
+          "fileformat"
+          "filetype"
+        ];
 
         lualine_y = [ "progress" ];
         lualine_z = [ "location" ];

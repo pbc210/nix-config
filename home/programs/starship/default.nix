@@ -1,4 +1,4 @@
-{settings, ...}:
+{ settings, ... }:
 {
   programs.starship = {
     enable = true;
