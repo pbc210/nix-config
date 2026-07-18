@@ -3,5 +3,6 @@
     ./completion.nix
     ./diagnostic.nix
     ./options.nix
+    ./keymaps.nix
   ];
 }
