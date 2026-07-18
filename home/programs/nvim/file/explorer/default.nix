@@ -1,6 +1,6 @@
 {
   imports = [
-    ./neo-tree.nix
     ./keymaps.nix
+    ./neo-tree.nix
   ];
 }

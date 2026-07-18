@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./explorer
+    ./search
+  ];
+}

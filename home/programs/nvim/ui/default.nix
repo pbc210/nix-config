@@ -1,9 +1,7 @@
 {
   imports = [
-    ./buffer
-    ./file-tree
-    ./status-bar
+    ./deps.nix
+    ./statusline
     ./theme
-    ./term
   ];
 }

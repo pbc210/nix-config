@@ -1,5 +1,7 @@
-{}:{
-  programs.nixvim.plugins = {
-    
-  };
+{
+  imports = [
+    ./cmp.nix
+    ./lsp.nix
+    ./treesitter.nix
+  ];
 }

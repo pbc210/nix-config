@@ -1,6 +1,5 @@
 {
   imports = [
-    ./core
-    ./nix
+    ./toggleterm.nix
   ];
 }

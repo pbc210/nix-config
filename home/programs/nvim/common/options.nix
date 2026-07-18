@@ -2,6 +2,7 @@
   programs.nixvim.opts = {
     number = true;
     relativenumber = true;
+
     signcolumn = "yes";
     cursorline = true;
 

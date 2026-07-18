@@ -1,3 +1,0 @@
-{
-  imports = [ ./nvim-autopairs.nix ];
-}
