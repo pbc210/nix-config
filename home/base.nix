@@ -4,6 +4,8 @@
   home.homeDirectory = settings.dirs.home;
   home.stateVersion = settings.stateVersion;
 
+  imports = [ ./theme ];
+
   home.packages = [
     pkgs.nixd
     pkgs.treefmt

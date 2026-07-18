@@ -100,7 +100,7 @@
             inputs.plasma-manager.homeModules.plasma-manager
             inputs.nix-flatpak.homeManagerModules.nix-flatpak
             inputs.nixvim.homeModules.nixvim
-            inputs.catppuccin.homeManagerModules.catppuccin
+            inputs.catppuccin.homeModules.catppuccin
           ];
 
           extraModulesNixos = [

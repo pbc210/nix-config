@@ -3,7 +3,7 @@
     enable = true;
 
     config = {
-      theme = "TwoDark";
+      # theme = "TwoDark";
       style = "numbers,changes,header";
       pager = "less -FR";
       italic-text = "always";
