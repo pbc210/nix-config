@@ -22,5 +22,6 @@
     ./plugins
     ./ui
     ./languages
+    ./editor
   ];
 }
