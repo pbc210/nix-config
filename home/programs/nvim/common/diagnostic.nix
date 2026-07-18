@@ -1,6 +1,6 @@
 {
   programs.nixvim.diagnostic = {
-    settings ={
+    settings = {
       update_in_insert = true;
       float = {
         border = "rounded";

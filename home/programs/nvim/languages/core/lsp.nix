@@ -8,7 +8,7 @@
         "gD" = "declaration";
         "gi" = "implementation";
         "gt" = "type_definition";
-        "K"  = "hover";
+        "K" = "hover";
         "<F2>" = "rename";
         "<F4>" = "code_action";
       };
