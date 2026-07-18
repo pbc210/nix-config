@@ -11,7 +11,7 @@
       persist_size = true;
       float_opts = {
         border = "rounded";
-        winblend = 95;
+        winblend = 5;
       };
     };
   };
