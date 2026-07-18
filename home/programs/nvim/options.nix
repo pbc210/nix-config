@@ -15,5 +15,7 @@
 
     clipboard = "unnamedplus";
     undofile = true;
+
+    updatetime = 300;
   };
 }
