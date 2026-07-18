@@ -42,6 +42,13 @@
       options = [ "subvol=@home" "compress=zstd:3" "noatime" "ssd" "discard=async" "space_cache=v2" "autodefrag" ];
     };
 
+  fileSystems."/workspaces" =
+    {
+      device = "/dev/disk/by-uuid/609dd9b6-ae03-4968-9df9-42e40c3aff7c";
+      fsType = "btrfs";
+      options = [ "subvol=@workspaces" "compress=zstd:3" "noatime" "ssd" "discard=async" "space_cache=v2" ];
+    };
+
   fileSystems."/boot" =
     {
       device = "/dev/disk/by-uuid/41DC-1183";
