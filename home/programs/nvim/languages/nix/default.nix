@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   programs.nixvim.plugins.lsp.servers.nixd = {
     enable = true;
@@ -11,4 +12,6 @@
       };
     };
   };
+
+  programs.nixvim.plugins.treesitter.grammarPackages = [ pkgs.vimPlugins.nvim-treesitter.builtGrammars.nix ];
 }
