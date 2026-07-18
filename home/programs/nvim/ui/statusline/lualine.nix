@@ -87,7 +87,13 @@
             }
           ];
 
-          lualine_y = [ "progress" ];
+          lualine_y = [
+            {
+              __unkeyed-1 = "datetime";
+              style = "%H:%M";
+            }
+            "progress"
+          ];
           lualine_z = [ "location" ];
         };
       };
