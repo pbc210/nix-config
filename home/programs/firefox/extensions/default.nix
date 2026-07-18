@@ -9,5 +9,6 @@ let
   ];
 in
 {
+  force = true;
   packages = extensions;
 }
