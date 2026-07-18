@@ -34,4 +34,11 @@
   prompt = " ";
 
   border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+
+  file = {
+    readonly = " ";
+    modified = " ";
+    newfile = " ";
+    unnamed = "[No Name]";
+  };
 }

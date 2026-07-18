@@ -47,6 +47,13 @@
               __unkeyed-1 = "filename";
               file_status = true;
               path = 1;
+              
+              symbols = {
+                modified = settings.glyphs.file.modified;
+                readonly = settings.glyphs.file.modified;
+                unnamed = settings.glyphs.file.unnamed;
+                newfile = settings.glyphs.file.newfile;
+              };
             }
 
             {
