@@ -12,6 +12,7 @@
     "${programsDir}/git"
     "${programsDir}/home-manager"
     "${programsDir}/kitty"
+    "${programsDir}/lazygit"
     "${programsDir}/nix-helper"
     "${programsDir}/nvim"
     "${programsDir}/ripgrep"
