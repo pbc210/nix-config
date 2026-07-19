@@ -2,5 +2,6 @@
 {
   imports = [
     "${servicesDir}/copyq"
+    "${servicesDir}/espanso"
   ];
 }
