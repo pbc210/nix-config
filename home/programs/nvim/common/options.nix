@@ -18,5 +18,6 @@
     undofile = true;
 
     updatetime = 300;
+    mouse = "";
   };
 }
