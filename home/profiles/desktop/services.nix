@@ -1,1 +1,6 @@
-{ }
+{servicesDir, ...}:
+{
+  imports = [
+    "${servicesDir}/copyq"
+  ];
+}
