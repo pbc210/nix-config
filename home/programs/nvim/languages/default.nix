@@ -3,5 +3,6 @@
     ./core
     ./nix
     ./json
+    ./lua
   ];
 }
