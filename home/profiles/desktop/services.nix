@@ -1,4 +1,4 @@
-{servicesDir, ...}:
+{ servicesDir, ... }:
 {
   imports = [
     "${servicesDir}/copyq"

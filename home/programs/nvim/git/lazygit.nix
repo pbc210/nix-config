@@ -1,4 +1,4 @@
-{pkgs, settings, ...}:
+{ pkgs, settings, ... }:
 {
   programs.nixvim = {
     extraPackages = with pkgs; [ lazygit ];

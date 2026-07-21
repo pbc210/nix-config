@@ -32,7 +32,7 @@
 
         "terminal.integrated.fontFamily" = " '${settings.fonts.terminal.name}' ";
         "terminal.integrated.fontSize" = settings.fonts.terminal.size + 3;
-        "terminal.integrated.minimumContrastRatio" =  1;
+        "terminal.integrated.minimumContrastRatio" = 1;
 
         "editor.fontSize" = settings.fonts.code.size;
         "editor.fontFamily" = settings.fonts.code.name;
