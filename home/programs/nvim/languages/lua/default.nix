@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, inputs, ...}:
 {
   programs.nixvim.plugins.lsp.servers.lua_ls = {
     enable = true;
@@ -11,6 +11,7 @@
         workspace = {
           libary = [
             "\${3rd}/luv/library"
+            "${inputs.wezterm-types}"
           ];
           checkThirdParty = false;
         };

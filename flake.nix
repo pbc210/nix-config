@@ -66,6 +66,11 @@
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     catppuccin.url = "github:catppuccin/nix";
+
+    wezterm-types = {
+      url = "https://github.com/DrKJeff16/wezterm-types";
+      flake = false;
+    };
   };
 
   outputs =

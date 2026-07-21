@@ -552,7 +552,8 @@
         "nur": "nur",
         "plasma-manager": "plasma-manager",
         "treefmt-nix": "treefmt-nix",
-        "vscode-extensions": "vscode-extensions"
+        "vscode-extensions": "vscode-extensions",
+        "wezterm-types": "wezterm-types"
       }
     },
     "rust-overlay": {
@@ -625,6 +626,18 @@
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
         "type": "github"
+      }
+    },
+    "wezterm-types": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-eeie8LZkOctOFBekeMOdDQLzT1oPqnZoZKYEFXvC/D8=",
+        "type": "file",
+        "url": "https://github.com/DrKJeff16/wezterm-types"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/DrKJeff16/wezterm-types"
       }
     },
     "xwayland-satellite-stable": {
