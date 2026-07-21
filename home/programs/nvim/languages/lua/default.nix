@@ -9,7 +9,7 @@
         };
 
         workspace = {
-          libary = [
+          library = [
             "\${3rd}/luv/library"
             "${inputs.wezterm-types}"
           ];
@@ -20,3 +20,4 @@
   };
   programs.nixvim.plugins.treesitter.grammarPackages = [ pkgs.vimPlugins.nvim-treesitter.builtGrammars.lua ];
 }
+
