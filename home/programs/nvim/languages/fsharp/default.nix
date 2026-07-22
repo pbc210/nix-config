@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.nixvim.plugins.lsp.servers.fsautocomple = {
+  programs.nixvim.plugins.lsp.servers.fsautocomplete = {
     enable = true;
   };
 
