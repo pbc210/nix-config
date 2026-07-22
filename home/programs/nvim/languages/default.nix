@@ -6,5 +6,6 @@
     ./lua
     ./ts-js
     ./markdown
+    ./python
   ];
 }
