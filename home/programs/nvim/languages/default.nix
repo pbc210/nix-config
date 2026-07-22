@@ -4,5 +4,6 @@
     ./nix
     ./json
     ./lua
+    ./ts-js
   ];
 }
