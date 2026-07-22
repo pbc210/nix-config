@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.lsp.servers.ts_ls = {
     enable = true;
@@ -20,6 +20,14 @@
       };
     };
   };
+
+  programs.nixvim.plugins.conform-nvim.settings.formatters_by_ft = {
+    javascript = [ "prettier" ];
+    typescript = [ "prettier" ];
+    javascriptreact = [ "prettier" ];
+    typescriptreact = [ "prettier" ];
+  };
+
   programs.nixvim.plugins.treesitter.grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
     typescript
     javascript

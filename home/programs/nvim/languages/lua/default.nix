@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}:
+{ pkgs, inputs, ... }:
 {
   programs.nixvim.plugins.lsp.servers.lua_ls = {
     enable = true;
@@ -18,6 +18,8 @@
       };
     };
   };
+
+  programs.nixvim.plugins.conform-nvim.settings.formatters_by_ft = { lua = [ "stylua" ]; };
   programs.nixvim.plugins.treesitter.grammarPackages = [ pkgs.vimPlugins.nvim-treesitter.builtGrammars.lua ];
 }
 
