@@ -5,15 +5,15 @@
     extraOptions = {
       settings = {
         Lua = {
-          diagnostic.globals = [ "vim" ];
-        };
+          diagnostics.globals = [ "vim" ];
 
-        workspace = {
-          library = [
-            "\${3rd}/luv/library"
-            "${inputs.wezterm-types}"
-          ];
-          checkThirdParty = false;
+          workspace = {
+            library = [
+              "\${3rd}/luv/library"
+              "${inputs.wezterm-types}/lua/wezterm/types"
+            ];
+            checkThirdParty = false;
+          };
         };
       };
     };
