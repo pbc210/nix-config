@@ -4,7 +4,7 @@
 
     ./csharp
     ./fsharp
-    # ./java
+    ./java
     ./json
     ./lua
     ./markdown
