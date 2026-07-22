@@ -2,7 +2,7 @@
   imports = [
     ./core
 
-    #./csharp
+    ./csharp
     ./fsharp
     ./java
     ./json
