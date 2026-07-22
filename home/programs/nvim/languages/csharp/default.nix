@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.lsp.servers.roslyn_ls = {
-    enable = false;
+    enable = true;
   };
 
   programs.nixvim.plugins.conform-nvim.settings.formatters_by_ft = { cs = "csharpier"; };
