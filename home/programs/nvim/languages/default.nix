@@ -3,7 +3,7 @@
     ./core
 
     ./csharp
-    # ./fsharp
+    ./fsharp
     # ./java
     ./json
     ./lua
