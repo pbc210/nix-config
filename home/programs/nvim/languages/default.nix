@@ -13,6 +13,7 @@
     ./json
     ./lua
     ./markdown
+    ./mdx
     ./nix
     ./python
     ./rust
