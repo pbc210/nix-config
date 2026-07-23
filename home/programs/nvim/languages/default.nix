@@ -6,6 +6,7 @@
     ./c-cpp
     ./cmake
     ./csharp
+    ./css
     ./fsharp
     ./html
     ./java
