@@ -2,6 +2,7 @@
   imports = [
     ./core
 
+    ./c-cpp
     ./csharp
     ./fsharp
     ./java

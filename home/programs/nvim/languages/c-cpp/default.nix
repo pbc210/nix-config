@@ -1,0 +1,33 @@
+{
+  programs.nixvim.lsp.servers.clangd = {
+    enable = true;
+    config = {
+      cmd = [
+        "clangd"
+        "--background-index"
+        "--clang-tidy"
+        "--header-insertion=iwyu"
+        "--completion-style=detailed"
+        "--fallback-flags=['--std=c++26']"
+      ];
+      filetypes = [
+        "h"
+        "hpp"
+        "c"
+        "cpp"
+        "cxx"
+        "cc"
+      ];
+    };
+  };
+
+  programs.nixvim.plugins.treesitter.settings.ensure_installed = [ "cpp" "c" ];
+  programs.nixvim.plugins.conform-nvim.settings.formatters_by_ft = {
+    h = [ "clang-format" ];
+    hpp = [ "clang-format" ];
+    c = [ "clang-format" ];
+    cpp = [ "clang-format" ];
+    cxx = [ "clang-format" ];
+    cc = [ "clang-format" ];
+  };
+}
