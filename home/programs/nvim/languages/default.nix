@@ -3,6 +3,7 @@
     ./core
 
     ./c-cpp
+    ./cmake
     ./csharp
     ./fsharp
     ./java
