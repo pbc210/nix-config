@@ -1,7 +1,7 @@
 {
   imports = [
     ./completion.nix
-    ./diagnostic.nix
+    ./diagnostic
     ./options.nix
     ./keymaps.nix
     ./editorconfig.nix

@@ -9,4 +9,7 @@
       severity_sort = true;
     };
   };
+  imports = [
+    ./lsp-lines.nix
+  ];
 }

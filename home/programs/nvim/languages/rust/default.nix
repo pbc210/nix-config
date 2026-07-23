@@ -12,7 +12,6 @@
     };
   };
 
-
   programs.nixvim.plugins.treesitter.settings.ensure_installed = [ "rust" ];
   programs.nixvim.plugins.conform-nvim.settings.formatters_by_ft = { rs = [ "rustfmt" ]; };
 }
