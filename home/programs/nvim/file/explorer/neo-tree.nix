@@ -5,6 +5,7 @@
 
     settings = {
       close_if_last_window = true;
+      async_directory_scan = "always";
 
       filesystem = {
         filtered_items = {
