@@ -2,6 +2,7 @@
   imports = [
     "${programsDir}/atuin"
     "${programsDir}/bat"
+    "${programsDir}/btop"
     "${programsDir}/direnv"
     "${programsDir}/dotnet"
     "${programsDir}/eza"
