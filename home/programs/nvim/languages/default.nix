@@ -14,5 +14,6 @@
     ./rust
     ./ts-js
     ./xml
+    ./yml-yaml
   ];
 }
