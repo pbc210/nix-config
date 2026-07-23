@@ -107,6 +107,7 @@ let
       programsDir = "${dir.home}/programs";
       servicesDir = "${dir.home}/services";
       desktopsDir = "${dir.home}/desktops";
+      developDir = "${dir.home}/develop";
     };
 
     mkBase-standalone = { profile, hostPlatform, extraModules, raw ? false }:

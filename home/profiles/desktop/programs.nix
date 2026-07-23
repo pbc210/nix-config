@@ -4,7 +4,6 @@
     "${programsDir}/bat"
     "${programsDir}/btop"
     "${programsDir}/direnv"
-    "${programsDir}/dotnet"
     "${programsDir}/eza"
     "${programsDir}/fastfetch"
     "${programsDir}/fd"

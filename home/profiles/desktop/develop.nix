@@ -1,0 +1,6 @@
+{ developDir, ... }:
+{
+  imports = [
+    "${developDir}/dotnet"
+  ];
+}
