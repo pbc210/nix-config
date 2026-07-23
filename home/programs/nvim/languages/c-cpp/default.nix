@@ -8,7 +8,6 @@
         "--clang-tidy"
         "--header-insertion=iwyu"
         "--completion-style=detailed"
-        "--fallback-flags=['--std=c++26']"
       ];
       filetypes = [
         "h"
