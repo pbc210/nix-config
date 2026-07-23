@@ -11,6 +11,7 @@
     ./markdown
     ./nix
     ./python
+    ./rust
     ./ts-js
     ./xml
   ];
