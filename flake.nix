@@ -103,6 +103,7 @@
 
           extraModulesHome = [
             inputs.plasma-manager.homeModules.plasma-manager
+            inputs.niri.homeModules.niri
             inputs.nix-flatpak.homeManagerModules.nix-flatpak
             inputs.nixvim.homeModules.nixvim
             inputs.catppuccin.homeModules.catppuccin

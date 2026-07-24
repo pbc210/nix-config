@@ -7,6 +7,7 @@
     ./develop.nix
 
     "${desktopsDir}/plasma6"
+    "${desktopsDir}/niri"
     ../../flatpak
   ];
 }
