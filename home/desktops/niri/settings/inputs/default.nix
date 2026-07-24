@@ -1,6 +1,5 @@
 {
   imports = [
-    ./settings
+    ./keyboard.nix
   ];
 }
-
