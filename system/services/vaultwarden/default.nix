@@ -1,3 +1,4 @@
+{ pkgs, settings, ... }:
 {
   services.vaultwarden = {
     enable = true;
@@ -6,27 +7,21 @@
       ROCKET_ADDRESS = "127.0.0.1";
       ROCKET_PORT = 8222;
 
-      DOMAIN = "https://bitwarden.localhost";
+      DOMAIN = "https://glider-crafter-retrace.ngrok-free.dev";
 
       SIGNUPS_ALLOWED = false;
       INVITATIONS_ALLOWED = false;
     };
   };
 
-  # services.nginx.virtualHosts."bitwarden.localhost" = {
-  #   forceSSL = true;
-  #   sslCertificate = "/var/lib/nginx/bitwarden.crt";
-  #   sslCertificateKey = "/var/lib/nginx/bitwarden.key";
-
-  #   locations."/" = {
-  #     proxyPass = "http://127.0.0.1:8222";
-  #     proxyWebsockets = true;
-  #   };
-  # };
-
-  services.caddy.virtualHosts."bitwarden.localhost" = {
-    extraConfig = ''
-      reverse_proxy 127.0.0.1:8222
-    '';
+  systemd.services.ngrok-vaultwarden = {
+    description = "Ngrok Tunnel for Vaultwarden";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.ngrok}/bin/ngrok http 8222 --domain=glider-crafter-retrace.ngrok-free.dev";
+      Restart = "always";
+      User = settings.identit.username;
+    };
   };
 }

@@ -8,6 +8,7 @@
     "${servicesDir}/kanata"
     "${servicesDir}/network-manager"
     "${servicesDir}/nginx"
+    "${servicesDir}/ngrok"
     # "${servicesDir}/openssh"
     "${servicesDir}/pipewire"
     "${servicesDir}/sddm"
