@@ -25,4 +25,6 @@
       };
     };
   };
+
+  programs.delta.enableGitIntegration = true;
 }

@@ -3,6 +3,7 @@
     "${programsDir}/atuin"
     "${programsDir}/bat"
     "${programsDir}/btop"
+    "${programsDir}/delta"
     "${programsDir}/direnv"
     "${programsDir}/eza"
     "${programsDir}/fastfetch"
