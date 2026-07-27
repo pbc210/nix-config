@@ -9,8 +9,11 @@
       };
 
       git = {
-
         autoFetch = true;
+        pagers = [{
+          colorArg = "always";
+          pager = "delta --dark --paging=never --line-numbers";
+        }];
       };
     };
   };
