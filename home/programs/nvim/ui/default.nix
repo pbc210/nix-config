@@ -1,6 +1,6 @@
 {
   imports = [
     ./statusline
-    ./theme
+    ./themes
   ];
 }
