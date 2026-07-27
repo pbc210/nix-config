@@ -7,5 +7,6 @@
 
     fcitx5.enable = false;
     kitty.enable = false;
+    vscode.profiles.default.enable = false;
   };
 }

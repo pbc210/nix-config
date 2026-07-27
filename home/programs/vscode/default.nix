@@ -5,6 +5,7 @@
     profiles.default = {
       extensions = with inputs.vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
         pkief.material-icon-theme
+        enkia.tokyo-night
 
         # nix
         jnoortheen.nix-ide
@@ -20,7 +21,7 @@
         "workbench.activityBar.compact" = true;
         "workbench.sideBar.location" = "right";
         "workbench.activityBar.location" = "bottom";
-        "workbench.colorTheme" = "Catppuccin Mocha";
+        "workbench.colorTheme" = "Tokyo Night";
         "workbench.iconTheme" = "catppuccin-mocha";
 
         "catppuccin.accentColor" = "${config.catppuccin.accent}";
