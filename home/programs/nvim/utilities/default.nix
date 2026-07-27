@@ -1,7 +1,7 @@
 {
   imports = [
-    ./mini.nix
-    ./plenary-nvim.nix
-    ./web-devicons.nix
+    ./mini
+    ./plenary
+    ./web-devicons
   ];
 }
