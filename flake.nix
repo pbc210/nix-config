@@ -71,6 +71,10 @@
       url = "github:/DrKJeff16/wezterm-types";
       flake = false;
     };
+    kitty-theme-tokyo-night = {
+      url = "github:/davidmathers/tokyo-night-kitty-theme";
+      flake = false;
+    };
   };
 
   outputs =

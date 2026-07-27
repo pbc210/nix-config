@@ -243,6 +243,22 @@
         "type": "github"
       }
     },
+    "kitty-theme-tokyo-night": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631904316,
+        "narHash": "sha256-Kfry+ICqQDZxpPt0EpPg8YwRyWGUhWcRQ6vQSSIsXtg=",
+        "owner": "davidmathers",
+        "repo": "tokyo-night-kitty-theme",
+        "rev": "68bd029855b73e1af9be82b23450d034b4b6f889",
+        "type": "github"
+      },
+      "original": {
+        "owner": "davidmathers",
+        "repo": "tokyo-night-kitty-theme",
+        "type": "github"
+      }
+    },
     "lanzaboote": {
       "inputs": {
         "crane": "crane",
@@ -544,6 +560,7 @@
         "catppuccin": "catppuccin",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
+        "kitty-theme-tokyo-night": "kitty-theme-tokyo-night",
         "lanzaboote": "lanzaboote",
         "niri": "niri",
         "nix-flatpak": "nix-flatpak",

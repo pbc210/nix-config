@@ -1,4 +1,4 @@
-{ settings, ... }:
+{ settings, inputs, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -24,47 +24,8 @@
       cursor_trail = 1;
 
       background_opacity = "0.85";
-
-      background = "#070f1c";
-      foreground = "#e0d9c7";
-
-      cursor = "#e0d9c7";
-
-      selection_foreground = "#050539";
-      selection_background = "#f2e5c8";
-
-      # Black / Grey
-      color0 = "#0e0807";
-      color8 = "#2f516c";
-
-      # Red
-      color1 = "#ea6847";
-      color9 = "#d943a8";
-
-      # Green
-      color2 = "#ea6847";
-      color10 = "#616d33";
-
-      # Yellow
-      color3 = "#5db2f8";
-      color11 = "#86dbf5";
-
-      # Blue
-      color4 = "#2f516c";
-      color12 = "#5db2f8";
-
-      # Magenta
-      color5 = "#d943a8";
-      color13 = "#d943a8";
-
-      # Cyan
-      color6 = "#86dbf5";
-      color14 = "#ea6847";
-
-      # White
-      color7 = "#e0d9c7";
-      color15 = "#e0d9c7";
     };
+
     keybindings = {
       "alt+shift+a" = "new_tab";
       "alt+shift+s" = "close_tab";
@@ -83,5 +44,9 @@
       "alt+shift+9" = "goto_tab 9";
       "alt+shift+10" = "goto_tab 10";
     };
+
+    extraConfig = ''
+      include ${inputs.kitty-theme-tokyo-night}/tokyo-night-kitty.conf
+    '';
   };
 }
