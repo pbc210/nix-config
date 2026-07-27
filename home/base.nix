@@ -4,7 +4,7 @@
   home.homeDirectory = settings.dirs.home;
   home.stateVersion = settings.stateVersion;
 
-  imports = [ ./theme ];
+  imports = [ ./themes ];
 
   home.packages = [
     pkgs.nixd
