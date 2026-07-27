@@ -1,6 +1,6 @@
 {
   programs.nixvim.colorschemes.catppuccin = {
-    enable = true;
+    enable = false;
     settings = {
       flavour = "mocha";
       transparent_background = false;
