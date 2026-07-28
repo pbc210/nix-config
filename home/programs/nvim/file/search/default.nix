@@ -1,6 +1,7 @@
 {
   imports = [
     ./keymaps.nix
-    ./telescope.nix
+    # ./telescope.nix
+    ./picker-snacks.nix
   ];
 }

@@ -5,6 +5,9 @@
 
   git = {
     logo = "󰊢 ";
+    commit = " ";
+
+    staged = "● ";
     diff = {
       added = " ";
       removed = " ";
