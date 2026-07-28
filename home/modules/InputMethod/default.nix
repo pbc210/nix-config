@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 {
   i18n.inputMethod = {
     enable = true;
@@ -9,6 +9,14 @@
       qt6Packages.fcitx5-configtool
     ];
     fcitx5.waylandFrontend = true;
+  };
+
+  home.sessionVariables = {
+    GTK_IM_MODULE = lib.mkForce "fcitx";
+    QT_IM_MODULE = lib.mkForce "fcitx";
+    XMODIFIERS = lib.mkForce "@im=fcitx";
+    SDL_IM_MODULE = lib.mkForce "fcitx";
+    GLFW_IM_MODULE = lib.mkForce "fcitx";
   };
 
   xdg.configFile."fcitx5/config".source = config.lib.file.mkOutOfStoreSymlink ./fcitx5/.conf;
