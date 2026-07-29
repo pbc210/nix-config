@@ -1,6 +1,14 @@
 [Hotkey]
 # Enumerate when holding modifier of Toggle key
-EnumerateWithTriggerKeys=False
+EnumerateWithTriggerKeys=True
+# Activate Input Method
+ActivateKeys=
+# Deactivate Input Method
+DeactivateKeys=
+# Temporarily Toggle Input Method
+AltTriggerKeys=
+# Enumerate Input Method Forward
+EnumerateForwardKeys=
 # Enumerate Input Method Backward
 EnumerateBackwardKeys=
 # Skip first input method while enumerating
@@ -9,41 +17,24 @@ EnumerateSkipFirst=False
 EnumerateGroupForwardKeys=
 # Enumerate Input Method Group Backward
 EnumerateGroupBackwardKeys=
+# Fallback Previous page
+PrevPage=
+# Fallback Next page
+NextPage=
+# Fallback Previous Candidate
+PrevCandidate=
+# Fallback Next Candidate
+NextCandidate=
+# Toggle embedded preedit
+TogglePreedit=
 # Time limit in milliseconds for triggering modifier key shortcuts
 ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
 0=Super+space
 
-[Hotkey/ActivateKeys]
-#0=
-
-[Hotkey/DeactivateKeys]
-#0=Hangul_Romaja
-
-[Hotkey/AltTriggerKeys]
-# 0=Super+space
-
-[Hotkey/EnumerateForwardKeys]
-# 0=Super+space
-
-[Hotkey/PrevPage]
-0=Up
-
-[Hotkey/NextPage]
-0=Down
-
-[Hotkey/PrevCandidate]
-0=Shift+Tab
-
-[Hotkey/NextCandidate]
-0=Tab
-
-[Hotkey/TogglePreedit]
-0=Control+Alt+P
-
 [Behavior]
-# Activate input method by default
+# Active By Default
 ActiveByDefault=False
 # Reset state on Focus In
 resetStateWhenFocusIn=No
@@ -59,7 +50,7 @@ showInputMethodInformationWhenFocusIn=False
 CompactInputMethodInformation=True
 # Show first input method information
 ShowFirstInputMethodInformation=True
-# Default Candidates per page
+# Default page size
 DefaultPageSize=5
 # Override XKB Option
 OverrideXkbOption=False
@@ -77,3 +68,4 @@ AllowInputMethodForPassword=False
 ShowPreeditForPassword=False
 # Interval of saving user data in minutes
 AutoSavePeriod=30
+
