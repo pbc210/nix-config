@@ -1,6 +1,6 @@
 { modulesDir, ... }: {
   imports = [
     "${modulesDir}/fonts"
-    "${modulesDir}/InputMethod"
+    "${modulesDir}/input-method"
   ];
 }
