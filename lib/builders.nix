@@ -76,7 +76,7 @@ let
       host = hostDefault;
       profile = profileDefault;
       extraModules = [ ];
-      name = "default";
+      name = "nixos";
     };
 
     mkNixos = { extraModules ? [ ], }:
