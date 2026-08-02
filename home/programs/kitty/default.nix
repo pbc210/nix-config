@@ -23,7 +23,7 @@
       window_padding_width = 5;
       cursor_trail = 1;
 
-      background_opacity = "0.95";
+      background_opacity = "1";
     };
 
     keybindings = {
