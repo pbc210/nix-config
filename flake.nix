@@ -63,6 +63,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    claude-desktop.url = "github:Reginleif88/claude-cowork-nix";
+
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     catppuccin.url = "github:catppuccin/nix";
@@ -105,17 +107,18 @@
           overlays = import ./overlays { inherit inputs; };
           libx = import ./lib { inherit inputs overlays; };
 
-          extraModulesHome = [
-            inputs.plasma-manager.homeModules.plasma-manager
-            inputs.niri.homeModules.niri
-            inputs.nix-flatpak.homeManagerModules.nix-flatpak
-            inputs.nixvim.homeModules.nixvim
-            inputs.catppuccin.homeModules.catppuccin
+          extraModulesHome = with inputs; [
+            plasma-manager.homeModules.plasma-manager
+            niri.homeModules.niri
+            nix-flatpak.homeManagerModules.nix-flatpak
+            nixvim.homeModules.nixvim
+            claude-desktop.homeManagerModules.default
+            catppuccin.homeModules.catppuccin
           ];
 
-          extraModulesNixos = [
-            inputs.lanzaboote.nixosModules.lanzaboote
-            inputs.home-manager.nixosModules.home-manager
+          extraModulesNixos = with inputs; [
+            lanzaboote.nixosModules.lanzaboote
+            home-manager.nixosModules.home-manager
           ];
         in
         {

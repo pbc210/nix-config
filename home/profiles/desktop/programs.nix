@@ -3,6 +3,7 @@
     "${programsDir}/atuin"
     "${programsDir}/bat"
     "${programsDir}/btop"
+    "${programsDir}/claude-desktop"
     "${programsDir}/delta"
     "${programsDir}/direnv"
     "${programsDir}/eza"
