@@ -41,4 +41,5 @@
   programs.direnv.enableZshIntegration = true;
   programs.atuin.enableZshIntegration = true;
   programs.lazygit.enableZshIntegration = true;
+  programs.nix-index.enableZshIntegration = true;
 }

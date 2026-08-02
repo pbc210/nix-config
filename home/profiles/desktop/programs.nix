@@ -17,6 +17,7 @@
     "${programsDir}/kitty"
     "${programsDir}/lazygit"
     "${programsDir}/nix-helper"
+    "${programsDir}/nix-index"
     "${programsDir}/nvim"
     "${programsDir}/ripgrep"
     "${programsDir}/starship"
