@@ -73,9 +73,15 @@
       url = "github:/DrKJeff16/wezterm-types";
       flake = false;
     };
+
     kitty-theme-tokyo-night = {
       url = "github:/davidmathers/tokyo-night-kitty-theme";
       flake = false;
+    };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -114,6 +120,7 @@
             nixvim.homeModules.nixvim
             claude-desktop.homeManagerModules.default
             catppuccin.homeModules.catppuccin
+            nix-index-database.homeModules.default
           ];
 
           extraModulesNixos = with inputs; [
