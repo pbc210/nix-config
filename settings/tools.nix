@@ -1,6 +1,6 @@
 rec {
   shell = "zsh";
-  editor = "code";
+  editor = "nvim";
   browser = "vivaldi";
   pager = "bat --plain --pager='less -FR'";
 
