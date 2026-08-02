@@ -7,7 +7,7 @@
       ai = { };
       comment = { };
       indentscope = {
-        symbol = "┃";
+        symbol = "┆";
       };
       splitjoin = { };
       hipatterns = { };
