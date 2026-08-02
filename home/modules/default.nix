@@ -1,3 +1,3 @@
 {
-  imports = [ ./InputMethod ./fonts ];
+  imports = [ ./input-method ./fonts ];
 }
