@@ -11,5 +11,6 @@ rec {
     nano = editor;
     grep = "rg";
     find = "fd";
+    tree = "eza -T";
   };
 }
