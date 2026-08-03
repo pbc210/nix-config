@@ -70,12 +70,12 @@
               __unkeyed-1 = "lsp_status";
               icon = settings.glyphs.lsp.icon;
 
-              fmt = ''
+              fmt.__raw = ''
                 function()
                   local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
                   local clients = vim.lsp.get_clients({ bufnr = 0 })
                   if next(clients) == nil then
-                    return 'No LSP'
+                    return '[No LSP]'
                   end
                   local client_names = {}
                   for _, client in ipairs(clients) do
@@ -91,6 +91,7 @@
             {
               __unkeyed-1 = "datetime";
               style = "%H:%M";
+              icon = " ";
             }
             "progress"
           ];
