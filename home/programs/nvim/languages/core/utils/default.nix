@@ -1,3 +1,7 @@
 {
-  imports = [ ./schemastore.nix ];
+  imports = [
+    ./lspkind.nix
+    ./luasnip.nix
+    ./schemastore.nix
+  ];
 }
