@@ -59,7 +59,7 @@
             {
               __unkeyed-1 = "diagnostics";
               sources = [ "nvim_diagnostic" ];
-              symbols = { error = settings.glyphs.level.error; warn = settings.glyphs.level.warning; info = settings.glyphs.level.info; hint = settings.glyphs.level.hint; };
+              symbols = { error = settings.glyphs.level.error; warn = settings.glyphs.level.warn; info = settings.glyphs.level.info; hint = settings.glyphs.level.hint; };
             }
           ];
 

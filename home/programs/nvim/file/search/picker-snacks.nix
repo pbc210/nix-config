@@ -36,7 +36,7 @@
 
         diagnostics = {
           Error = settings.glyphs.level.error;
-          Warn = settings.glyphs.level.warning;
+          Warn = settings.glyphs.level.warn;
           Hint = settings.glyphs.level.hint;
           Info = settings.glyphs.level.info;
         };

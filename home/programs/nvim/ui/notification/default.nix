@@ -1,0 +1,3 @@
+{
+  imports = [ ./notifier-snacks.nix ];
+}

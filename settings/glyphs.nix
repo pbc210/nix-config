@@ -25,9 +25,11 @@
 
   level = {
     error = " ";
-    warning = " ";
+    warn = " ";
     info = "󰋽 ";
     hint = " ";
+    debug = " ";
+    trace = "[Trace]";
   };
 
   lsp = {
