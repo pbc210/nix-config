@@ -21,6 +21,7 @@
     "${programsDir}/nvim"
     "${programsDir}/ripgrep"
     "${programsDir}/starship"
+    "${programsDir}/superfile"
     "${programsDir}/vivaldi"
     "${programsDir}/vscode"
     "${programsDir}/zoxide"
