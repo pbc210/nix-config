@@ -1,9 +1,10 @@
 {
   imports = [
-    ./cmp.nix
-    ./lsp.nix
-    ./treesitter.nix
-    ./schema.nix
-    ./conform.nix
+    ./autocompletion
+    ./diagnostic
+    ./formatter
+    ./highlight
+    ./lsp
+    ./utils
   ];
 }

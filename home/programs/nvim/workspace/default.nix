@@ -1,6 +1,6 @@
 {
   imports = [
-    ./auto-session.nix
+    ./session
     ./workspace.nix
   ];
 }

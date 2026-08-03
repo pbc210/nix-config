@@ -1,0 +1,3 @@
+{
+  imports = [ ./auto-session.nix ];
+}

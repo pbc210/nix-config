@@ -6,17 +6,16 @@
   };
 
   imports = [
-    ./base
-    ./diagnostic
+    ./core
     ./direnv
     ./edit
     ./file
     ./git
     ./languages
-    ./load-config
+    ./project
     ./terminal
     ./ui
-    ./utilities
+    ./utils
     ./workspace
   ];
 }

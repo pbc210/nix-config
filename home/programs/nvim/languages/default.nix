@@ -19,6 +19,7 @@
     ./rust
     ./sh
     ./ts-js
+    ./vim
     ./xml
     ./yml-yaml
   ];
