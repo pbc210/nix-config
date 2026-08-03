@@ -19,6 +19,9 @@
     git_status = true;
     git_untracked = false;
 
+    hidden = true;
+    ignored = true;
+
     formatters = {
       file.filename_only = true;
       severity.pos = "right";

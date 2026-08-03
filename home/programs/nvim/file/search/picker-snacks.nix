@@ -59,21 +59,38 @@
           };
         };
       };
+
       win = {
         input = {
           keys = {
-            "<A-a>" = { __raw = ''{ "cancel", mode = { "i", "n" } }''; };
-            "<A-w>" = { __raw = ''{ "cancel", mode = { "i", "n" }, }''; };
-            "<A-s>" = { __raw = ''{ "bufdelete", mode = { "i", "n" }, }''; };
+            "<A-a>".__raw = ''{ "cancel", mode = { "i", "n" } }'';
+            "<A-w>".__raw = ''{ "cancel", mode = { "i", "n" }, }'';
+            "<A-s>".__raw = ''{ "bufdelete", mode = { "i", "n" }, }'';
           };
         };
         list = {
           keys = {
-            "<A-a>" = { __raw = ''{ "cancel", mode = { "i", "n" }, }''; };
-            "<A-w>" = { __raw = ''{ "cancel", mode = { "i", "n" }, }''; };
-            "<A-s>" = { __raw = ''{ "bufdelete", mode = { "i", "n" }, }''; };
-            "s" = { __raw = ''{ "bufdelete", mode = { "n" }, }''; };
+            "<A-a>".__raw = ''{ "cancel", mode = { "i", "n" }, }'';
+            "<A-w>".__raw = ''{ "cancel", mode = { "i", "n" }, }'';
+            "<A-s>".__raw = ''{ "bufdelete", mode = { "i", "n" }, }'';
+            "s".__raw = ''{ "bufdelete", mode = { "n" }, }'';
           };
+        };
+      };
+
+      sources = {
+        files = {
+          enabled = true;
+
+          hidden = true;
+          ignored = true;
+        };
+
+        smart = {
+          enabled = true;
+
+          hidden = true;
+          ignored = true;
         };
       };
     };
@@ -100,5 +117,6 @@
         options.desc = "List Buffers";
       }
     ];
+
   };
 }
