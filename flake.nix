@@ -21,6 +21,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/release-26.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nur = {
       url = "github:nix-community/NUR";
@@ -127,6 +131,7 @@
           extraModulesNixos = with inputs; [
             lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
           ];
         in
         {
