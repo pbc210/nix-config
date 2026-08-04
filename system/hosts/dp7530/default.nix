@@ -1,6 +1,6 @@
 { pkgs, lib, ... }: {
   boot = {
-    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+    kernelPackages = pkgs.linuxPackages_cachyos;
     loader.systemd-boot.enable = lib.mkForce false;
 
     lanzaboote = {
