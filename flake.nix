@@ -32,8 +32,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    base16-schemes = {
-      url = "github:tinted-theming/base16-schemes";
+    schemes = {
+      url = "github:pbc210/schemes";
       flake = false;
     };
 

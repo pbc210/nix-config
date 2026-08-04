@@ -51,22 +51,6 @@
         "type": "github"
       }
     },
-    "base16-schemes": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1702718998,
-        "narHash": "sha256-VTczZi1C4WSzejpTFbneMonAdarRLtDnFehVxWs6ad0=",
-        "owner": "tinted-theming",
-        "repo": "base16-schemes",
-        "rev": "2b6f2d0677216ddda50c9cabd6ee70fae4665f81",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tinted-theming",
-        "repo": "base16-schemes",
-        "type": "github"
-      }
-    },
     "base16-vim": {
       "flake": false,
       "locked": {
@@ -810,7 +794,6 @@
     },
     "root": {
       "inputs": {
-        "base16-schemes": "base16-schemes",
         "cachyos-kernel": "cachyos-kernel",
         "catppuccin": "catppuccin",
         "claude-desktop": "claude-desktop",
@@ -825,6 +808,7 @@
         "nixvim": "nixvim",
         "nur": "nur",
         "plasma-manager": "plasma-manager",
+        "schemes": "schemes",
         "stylix": "stylix",
         "treefmt-nix": "treefmt-nix",
         "vscode-extensions": "vscode-extensions",
@@ -849,6 +833,22 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "schemes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785863261,
+        "narHash": "sha256-qlFUdwzkZcqW+AFeQOl7xTkwJAd04xgtZiP+/vXzwU0=",
+        "owner": "pbc210",
+        "repo": "schemes",
+        "rev": "fd1ccad590b785c1e29d963663179a01d17706f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pbc210",
+        "repo": "schemes",
         "type": "github"
       }
     },
