@@ -11,6 +11,7 @@
     fcitx5.waylandFrontend = true;
   };
 
+  stylix.targets.fcitx5.enable = false;
 
   xdg.configFile."fcitx5/config".source = config.lib.file.mkOutOfStoreSymlink ./fcitx5/config;
   xdg.configFile."fcitx5/conf/clipboard.conf".source = config.lib.file.mkOutOfStoreSymlink ./fcitx5/conf/clipboard.conf;
