@@ -156,6 +156,7 @@ let
 
           useGlobalPkgs = true;
           useUserPackages = true;
+          backupFileExtension = "hm-backup";
 
           users.${settings.identity.username} = { osConfig, ... }: {
             imports = home.mkModules {
