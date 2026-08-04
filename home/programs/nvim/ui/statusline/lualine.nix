@@ -31,22 +31,32 @@
               __unkeyed-1 = "branch";
               icon = settings.glyphs.git.branch.icon;
             }
-
-            {
-              __unkeyed-1 = "diff";
-              symbols = {
-                added = settings.glyphs.git.diff.added;
-                modified = settings.glyphs.git.diff.modified;
-                removed = settings.glyphs.git.diff.removed;
-              };
-            }
           ];
 
           lualine_c = [
             {
+              __unkeyed-1 = "diagnostics";
+              sources = [ "nvim_diagnostic" ];
+              symbols = { error = settings.glyphs.level.error; warn = settings.glyphs.level.warn; info = settings.glyphs.level.info; hint = settings.glyphs.level.hint; };
+            }
+          ];
+
+          lualine_x = [
+            "filetype"
+          ];
+
+          lualine_y = [
+            "progress"
+          ];
+          lualine_z = [ "location" ];
+        };
+
+        winbar = {
+          lualine_a = [
+            {
               __unkeyed-1 = "filename";
               file_status = true;
-              path = 1;
+              path = 0;
 
               symbols = {
                 modified = settings.glyphs.file.modified;
@@ -56,16 +66,24 @@
               };
             }
 
-            {
-              __unkeyed-1 = "diagnostics";
-              sources = [ "nvim_diagnostic" ];
-              symbols = { error = settings.glyphs.level.error; warn = settings.glyphs.level.warn; info = settings.glyphs.level.info; hint = settings.glyphs.level.hint; };
-            }
+
           ];
 
-          lualine_x = [
+          lualine_b = [{
+            __unkeyed-1 = "diff";
+            symbols = {
+              added = settings.glyphs.git.diff.added;
+              modified = settings.glyphs.git.diff.modified;
+              removed = settings.glyphs.git.diff.removed;
+            };
+          }];
+
+          lualine_c = [
             "encoding"
-            "filetype"
+          ];
+
+          lualine_x = [ ];
+          lualine_y = [
             {
               __unkeyed-1 = "lsp_status";
               icon = settings.glyphs.lsp.icon;
@@ -87,15 +105,13 @@
             }
           ];
 
-          lualine_y = [
+          lualine_z = [
             {
               __unkeyed-1 = "datetime";
               style = "%H:%M";
               icon = " ";
             }
-            "progress"
           ];
-          lualine_z = [ "location" ];
         };
       };
     };
