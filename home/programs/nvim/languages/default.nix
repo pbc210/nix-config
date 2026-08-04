@@ -5,14 +5,14 @@
     ./bazel
     ./c-cpp
     ./cmake
-    ./csharp
+    ./cs
     ./css
-    ./fsharp
+    ./fs
     ./html
     ./java
     ./json
     ./lua
-    ./markdown
+    ./md
     ./mdx
     ./nix
     ./python
