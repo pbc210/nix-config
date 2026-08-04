@@ -1,3 +1,0 @@
-{
-  imports = [ ./input-method ./fonts ];
-}

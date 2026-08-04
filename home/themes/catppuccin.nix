@@ -1,6 +1,6 @@
 {
   catppuccin = {
-    enable = true;
+    enable = false;
     autoEnable = true;
     flavor = "mocha";
     accent = "blue";

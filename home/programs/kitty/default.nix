@@ -1,11 +1,7 @@
-{ settings, inputs, ... }:
+{ inputs, ... }:
 {
   programs.kitty = {
     enable = true;
-    font = {
-      name = settings.fonts.terminal.name;
-      size = settings.fonts.terminal.size;
-    };
 
     settings = {
       scrollback_lines = 10000;
@@ -22,8 +18,6 @@
       bold_italic_font = "auto";
       window_padding_width = 5;
       cursor_trail = 1;
-
-      background_opacity = "1";
     };
 
     keybindings = {

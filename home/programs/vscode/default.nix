@@ -1,4 +1,4 @@
-{ pkgs, settings, inputs, config, ... }:
+{ pkgs, inputs, config, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -21,7 +21,6 @@
         "workbench.activityBar.compact" = true;
         "workbench.sideBar.location" = "right";
         "workbench.activityBar.location" = "bottom";
-        "workbench.colorTheme" = "Tokyo Night";
         "workbench.iconTheme" = "catppuccin-mocha";
 
         "catppuccin.accentColor" = "${config.catppuccin.accent}";
@@ -31,12 +30,8 @@
         "git.autofetch" = true;
         "git.confirmSync" = false;
 
-        "terminal.integrated.fontFamily" = " '${settings.fonts.terminal.name}' ";
-        "terminal.integrated.fontSize" = settings.fonts.terminal.size + 3;
         "terminal.integrated.minimumContrastRatio" = 1;
 
-        "editor.fontSize" = settings.fonts.code.size;
-        "editor.fontFamily" = settings.fonts.code.name;
         "editor.fontLigatures" = true;
         "editor.semanticHighlighting.enabled" = true;
       };
