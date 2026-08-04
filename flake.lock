@@ -420,22 +420,6 @@
         "type": "github"
       }
     },
-    "kitty-theme-tokyo-night": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1631904316,
-        "narHash": "sha256-Kfry+ICqQDZxpPt0EpPg8YwRyWGUhWcRQ6vQSSIsXtg=",
-        "owner": "davidmathers",
-        "repo": "tokyo-night-kitty-theme",
-        "rev": "68bd029855b73e1af9be82b23450d034b4b6f889",
-        "type": "github"
-      },
-      "original": {
-        "owner": "davidmathers",
-        "repo": "tokyo-night-kitty-theme",
-        "type": "github"
-      }
-    },
     "lanzaboote": {
       "inputs": {
         "crane": "crane",
@@ -799,7 +783,6 @@
         "claude-desktop": "claude-desktop",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
-        "kitty-theme-tokyo-night": "kitty-theme-tokyo-night",
         "lanzaboote": "lanzaboote",
         "niri": "niri",
         "nix-flatpak": "nix-flatpak",
@@ -839,11 +822,11 @@
     "schemes": {
       "flake": false,
       "locked": {
-        "lastModified": 1785863261,
-        "narHash": "sha256-qlFUdwzkZcqW+AFeQOl7xTkwJAd04xgtZiP+/vXzwU0=",
+        "lastModified": 1785864436,
+        "narHash": "sha256-zJDQgIm1HQsGLCcRcPjiO6+/9AAcCVCiJGm57Fue8d8=",
         "owner": "pbc210",
         "repo": "schemes",
-        "rev": "fd1ccad590b785c1e29d963663179a01d17706f0",
+        "rev": "365bb404733c39bebdf4129a947fc1c78895e178",
         "type": "github"
       },
       "original": {

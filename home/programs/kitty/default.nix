@@ -1,4 +1,4 @@
-{ settings, inputs, config, ... }:
+{ settings, inputs, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -46,8 +46,8 @@
     };
 
     extraConfig = ''
-      # include ${inputs.kitty-theme-tokyo-night}/tokyo-night-kitty.conf
-      include ${config.lib.file.mkOutOfStoreSymlink ./themes/carbonfox.conf}
+      # include ${inputs.schemes}/tools/tokyonight/kitty.night.conf
+      include ${inputs.schemes}/tools/nightfox/kitty.carbonfox.conf
     '';
   };
 }
