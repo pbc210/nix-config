@@ -6,14 +6,16 @@
       "https://pbcdev.cachix.org"
       "https://cache.nixos.org"
       "https://nix-community.cachix.org"
-      "https://chaotic-nyx.cachix.org"
+      "https://niri.cachix.org"
+      "https://nyx-cache.chaotic.cx"
     ];
 
     extra-trusted-public-keys = [
       "pbcdev.cachix.org-1:iZbrMY/10HM5BQPXeIIHkGoDc4boLuSZYiZuPhIn9P8="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
+      "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
+      "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
     ];
     allow-unfree = true;
     auto-optimise-store = true;
@@ -136,7 +138,7 @@
           extraModulesNixos = with inputs; [
             lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
-            chaotic.nixosModules.default
+            chaotic.homeModules.default
           ];
         in
         {
