@@ -18,4 +18,7 @@
     ./utils
     ./workspace
   ];
+
+  stylix.targets.nixvim.enable = false;
+  stylix.targets.neovim.enable = false;
 }
