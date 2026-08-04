@@ -41,7 +41,7 @@
 
     extraConfig = ''
       # include ${inputs.schemes}/tools/tokyonight/kitty.night.conf
-      include ${inputs.schemes}/tools/nightfox/kitty.carbonfox.conf
+      # include ${inputs.schemes}/tools/nightfox/kitty.carbonfox.conf
     '';
   };
 }

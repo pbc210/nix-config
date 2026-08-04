@@ -12,8 +12,8 @@
     };
 
     monospace = {
-      package = pkgs.jetbrains-mono;
-      name = "JetBrains Mono";
+      package = pkgs.fira-code;
+      name = "Fira Code";
     };
 
     emoji = {
