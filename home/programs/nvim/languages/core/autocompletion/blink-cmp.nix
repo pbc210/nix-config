@@ -7,14 +7,16 @@
 
     settings = {
       keymap = {
-        preset = "default";
-        # "<C-space>" = [ "show" "show_documentation" "hide_documentation" ];
-        # "<C-e>" = [ "hide" ];
-        # "<C-y>" = [ "select_and_accept" ];
-        # "<Tab>" = [ "snippet_forward" "fallback" ];
-        # "<S-Tab>" = [ "snippet_backward" "fallback" ];
-        # "<Up>" = [ "select_prev" "fallback" ];
-        # "<Down>" = [ "select_next" "fallback" ];
+        preset = "none";
+
+        "<A-Tab>" = [ "select_next" "fallback" ];
+        "<A-q>" = [ "select_prev" "fallback" ];
+
+        "<Down>" = [ "select_next" "fallback" ];
+        "<Up>" = [ "select_prev" "fallback" ];
+
+        "<C-space>" = [ "show" "show_documentation" "hide_documentation" ];
+        "<Tab>" = [ "accept" "fallback" ];
       };
 
       appearance = {
