@@ -19,5 +19,8 @@
     ./hardware-configuration.nix
   ];
 
+  services.scx.enable = true;
+  services.scx.scheduler = "scx_rusty";
+
   host-config.gpuDrivers = [ "intel" ];
 }
