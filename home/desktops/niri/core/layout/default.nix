@@ -6,8 +6,6 @@
       enable = true;
 
       width = 4;
-
-
     };
 
     insert-hint = {
@@ -33,5 +31,12 @@
       draw-behind-window = true;
     };
 
+    preset-column-widths = [
+      { proportion = 1./3.; }
+      { proportion = 1./2.; }
+      { proportion = 2./3.; }
+      { proportion = 1.0; }
+    ];
+    default-column-width = { proportion = 0.5; };
   };
 }
