@@ -5,6 +5,7 @@
 
   imports = [
     ./border.nix
+    ./insert-hint.nix
     ./shadow.nix
   ];
 }
