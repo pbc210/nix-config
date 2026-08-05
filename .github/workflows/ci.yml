@@ -26,13 +26,9 @@ jobs:
           name: pbcdev
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
-      - name: Check Nix formatting
-        run: |
-          nix fmt -- --check || echo "Format check skipped or nix fmt not defined"
-
       - name: Build System Configuration
         run: |
-          nix build .#nixosConfigurations.dp7530-desktop.config.system.build.toplevel
+          nix build .#nixosConfigurations.dp7530-desktop.config.system.build.toplevel --accept-flake-config
 
       - name: Build Default Package
         run: nix build .#defaultPackage.x86_64-linux --dry-run
