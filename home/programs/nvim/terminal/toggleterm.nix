@@ -2,7 +2,7 @@
   programs.nixvim.plugins.toggleterm = {
     enable = true;
     settings = {
-      open_mapping = "[[<C-Space>]]";
+      open_mapping = "[[<A-Space>]]";
 
       direction = "float";
 

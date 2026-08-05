@@ -6,5 +6,7 @@
       search_mode = "prefix";
       style = "compact";
     };
+
+    flags = [ "--disable-ctrl-r" ];
   };
 }
