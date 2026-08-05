@@ -5,5 +5,6 @@
 
   imports = [
     ./border.nix
+    ./shadow.nix
   ];
 }
