@@ -107,7 +107,7 @@
     };
 
     schemes = {
-      url = "github:pbc210/schemes";
+      url = "github:pbcdev210/schemes";
       flake = false;
     };
 
