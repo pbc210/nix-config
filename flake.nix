@@ -65,7 +65,7 @@
 
           extraModulesNixos = with inputs; [
             lanzaboote.nixosModules.lanzaboote
-            chaotic.homeModules.default
+            chaotic.nixosModules.default
 
             home-manager.nixosModules.home-manager
           ];
