@@ -4,4 +4,6 @@
     ./inputs
     ./outputs
   ];
+
+  stylix.targets.niri.enable = true;
 }
