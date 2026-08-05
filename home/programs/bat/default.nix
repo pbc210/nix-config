@@ -9,4 +9,5 @@
       italic-text = "always";
     };
   };
+  stylix.targets.bat.enable = true;
 }

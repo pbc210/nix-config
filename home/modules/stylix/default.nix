@@ -12,10 +12,13 @@
       name = "Bibata-Modern-Classic";
       size = 24;
     };
+
+    autoEnable = false;
   };
 
   imports = [
     ./fonts.nix
+    ./targets.nix
   ];
 }
 

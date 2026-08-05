@@ -44,4 +44,6 @@
       # include ${inputs.schemes}/tools/nightfox/kitty.carbonfox.conf
     '';
   };
+
+  stylix.targets.kitty.enable = true;
 }
