@@ -21,6 +21,76 @@
     auto-optimise-store = true;
   };
 
+  outputs =
+    inputs@{ flake-parts
+    , ...
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      imports = [
+        inputs.treefmt-nix.flakeModule
+      ];
+
+      perSystem = { pkgs, ... }: {
+        treefmt.config = {
+          projectRootFile = "flake.nix";
+          programs = {
+            nixpkgs-fmt.enable = true;
+            prettier.enable = true;
+          };
+        };
+
+        packages = import ./packages { inherit pkgs; };
+        devShells.default = import ./modules/devshell.nix { inherit pkgs; };
+      };
+
+      flake =
+        let
+          overlays = import ./overlays { inherit inputs; };
+          libx = import ./lib { inherit inputs overlays; };
+
+          extraModulesHome = with inputs; [
+            plasma-manager.homeModules.plasma-manager
+            niri.homeModules.niri
+            niri.homeModules.stylix
+            stylix.homeModules.stylix
+            catppuccin.homeModules.catppuccin
+
+            nix-flatpak.homeManagerModules.nix-flatpak
+            nixvim.homeModules.nixvim
+            claude-desktop.homeManagerModules.default
+
+            nix-index-database.homeModules.default
+          ];
+
+          extraModulesNixos = with inputs; [
+            lanzaboote.nixosModules.lanzaboote
+            chaotic.homeModules.default
+
+            home-manager.nixosModules.home-manager
+          ];
+        in
+        {
+          overlays.default = overlays;
+
+          nixosConfigurations = libx.builders.mkNixos {
+            extraModules = [
+              {
+                # Embed Home Manager into Nixos
+                home-manager = libx.builders.mkHome {
+                  extraModules = extraModulesHome;
+                  standalone = false;
+                };
+              }
+            ]
+            ++ extraModulesNixos;
+          };
+
+          homeConfigurations = libx.builders.mkHome { extraModules = extraModulesHome; };
+        };
+    };
+
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -95,69 +165,4 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
-  outputs =
-    inputs@{ flake-parts
-    , ...
-    }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" ];
-      imports = [
-        inputs.treefmt-nix.flakeModule
-      ];
-
-      perSystem = { pkgs, ... }: {
-        treefmt.config = {
-          projectRootFile = "flake.nix";
-          programs = {
-            nixpkgs-fmt.enable = true;
-            prettier.enable = true;
-          };
-        };
-
-        packages = import ./packages { inherit pkgs; };
-        devShells.default = import ./modules/devshell.nix { inherit pkgs; };
-      };
-
-      flake =
-        let
-          overlays = import ./overlays { inherit inputs; };
-          libx = import ./lib { inherit inputs overlays; };
-
-          extraModulesHome = with inputs; [
-            plasma-manager.homeModules.plasma-manager
-            niri.homeModules.niri
-            nix-flatpak.homeManagerModules.nix-flatpak
-            nixvim.homeModules.nixvim
-            claude-desktop.homeManagerModules.default
-            catppuccin.homeModules.catppuccin
-            nix-index-database.homeModules.default
-            stylix.homeModules.stylix
-          ];
-
-          extraModulesNixos = with inputs; [
-            lanzaboote.nixosModules.lanzaboote
-            home-manager.nixosModules.home-manager
-            chaotic.homeModules.default
-          ];
-        in
-        {
-          overlays.default = overlays;
-
-          nixosConfigurations = libx.builders.mkNixos {
-            extraModules = [
-              {
-                # Embed Home Manager into Nixos
-                home-manager = libx.builders.mkHome {
-                  extraModules = extraModulesHome;
-                  standalone = false;
-                };
-              }
-            ]
-            ++ extraModulesNixos;
-          };
-
-          homeConfigurations = libx.builders.mkHome { extraModules = extraModulesHome; };
-        };
-    };
 }
