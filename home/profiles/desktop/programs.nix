@@ -6,6 +6,7 @@
     "${programsDir}/claude-desktop"
     "${programsDir}/delta"
     "${programsDir}/direnv"
+    "${programsDir}/emacs"
     "${programsDir}/eza"
     "${programsDir}/fastfetch"
     "${programsDir}/fd"

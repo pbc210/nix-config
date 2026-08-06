@@ -59,6 +59,7 @@
             nix-flatpak.homeManagerModules.nix-flatpak
             nixvim.homeModules.nixvim
             claude-desktop.homeManagerModules.default
+            nix-doom-emacs-unstraightened.homeModule
 
             nix-index-database.homeModules.default
           ];
@@ -162,6 +163,11 @@
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
