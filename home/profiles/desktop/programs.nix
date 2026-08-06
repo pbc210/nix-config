@@ -9,7 +9,6 @@
     "${programsDir}/eza"
     "${programsDir}/fastfetch"
     "${programsDir}/fd"
-    "${programsDir}/firefox"
     "${programsDir}/fzf"
     "${programsDir}/gh"
     "${programsDir}/git"
