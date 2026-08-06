@@ -2,6 +2,7 @@
 {
   imports = [
     "${modulesDir}/bluetooth"
+    "${modulesDir}/keyboard"
     "${modulesDir}/ldLibraries"
     "${modulesDir}/networking"
     "${modulesDir}/nix"

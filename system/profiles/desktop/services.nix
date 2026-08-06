@@ -5,7 +5,6 @@
     "${servicesDir}/envfs"
     "${servicesDir}/flatpak"
     "${servicesDir}/iwd"
-    "${servicesDir}/kanata"
     "${servicesDir}/network-manager"
     "${servicesDir}/nginx"
     "${servicesDir}/ngrok"
