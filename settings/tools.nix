@@ -1,5 +1,5 @@
 rec {
-  shell = "zsh";
+  shell = "fish";
   editor = "nvim";
   browser = "vivaldi";
   pager = "bat --plain --pager='less -FR'";
