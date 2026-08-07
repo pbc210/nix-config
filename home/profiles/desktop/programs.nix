@@ -1,6 +1,7 @@
 { programsDir, ... }: {
   imports = [
     "${programsDir}/atuin"
+    "${programsDir}/bash"
     "${programsDir}/bat"
     "${programsDir}/btop"
     "${programsDir}/claude-desktop"
