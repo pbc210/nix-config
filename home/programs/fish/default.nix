@@ -24,7 +24,7 @@
       bind ctrl-space _atuin_bind_up
       bind alt-tab complete-and-search
       bind tab accept-autosuggestion
-      bind alt+q _fzf_search_directory
+      bind alt-q _fzf_search_directory
 
       bind ctrl-l forward-token
       bind ctrl-h backward-token
@@ -45,4 +45,5 @@
   programs.lazygit.enableFishIntegration = true;
   programs.nix-index.enableFishIntegration = true;
   programs.kitty.shellIntegration.enableFishIntegration = true;
+  programs.tirith.enableFishIntegration = true;
 }

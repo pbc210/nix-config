@@ -24,6 +24,7 @@
     "${programsDir}/ripgrep"
     "${programsDir}/starship"
     "${programsDir}/superfile"
+    "${programsDir}/tirith"
     "${programsDir}/vivaldi"
     "${programsDir}/vscode"
     "${programsDir}/zoxide"
