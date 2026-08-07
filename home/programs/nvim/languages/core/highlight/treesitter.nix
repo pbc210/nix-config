@@ -1,7 +1,9 @@
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.treesitter = {
     enable = true;
     nixGrammars = true;
+    grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
     settings = {
 
       highlight = {

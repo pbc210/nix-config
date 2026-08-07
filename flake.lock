@@ -842,6 +842,7 @@
         "schemes": "schemes",
         "stylix": "stylix",
         "treefmt-nix": "treefmt-nix",
+        "treesitter-kanata": "treesitter-kanata",
         "vscode-extensions": "vscode-extensions",
         "wezterm-types": "wezterm-types"
       }
@@ -1057,6 +1058,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "treesitter-kanata": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786091899,
+        "narHash": "sha256-JvfFXMY2eCKIcYqYH1Slki/gKdvv4hnuVWnRjoWx8o8=",
+        "owner": "pbcdev210",
+        "repo": "treesitter-kanata",
+        "rev": "a2ddf9bb801faf5d6b57398b968dd863410a2a11",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pbcdev210",
+        "repo": "treesitter-kanata",
         "type": "github"
       }
     },

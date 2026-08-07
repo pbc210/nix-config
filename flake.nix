@@ -46,7 +46,9 @@
 
       flake =
         let
-          overlays = import ./overlays { inherit inputs; };
+          overlays = (import ./overlays { inherit inputs; }) ++ [
+            inputs.treesitter-kanata.overlays.default
+          ];
           libx = import ./lib { inherit inputs overlays; };
 
           extraModulesHome = with inputs; [
@@ -62,6 +64,8 @@
             nix-doom-emacs-unstraightened.homeModule
 
             nix-index-database.homeModules.default
+
+            treesitter-kanata.homeManagerModules.nixvim
           ];
 
           extraModulesNixos = with inputs; [
@@ -168,6 +172,13 @@
 
     nix-doom-emacs-unstraightened = {
       url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # ======================= nixvim ========================
+
+    treesitter-kanata = {
+      url = "github:pbcdev210/treesitter-kanata";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
