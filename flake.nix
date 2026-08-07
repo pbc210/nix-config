@@ -46,11 +46,6 @@
 
       flake =
         let
-          overlays = (import ./overlays { inherit inputs; }) ++ [
-            inputs.treesitter-kanata.overlays.default
-          ];
-          libx = import ./lib { inherit inputs overlays; };
-
           extraModulesHome = with inputs; [
             plasma-manager.homeModules.plasma-manager
             niri.homeModules.niri
@@ -74,6 +69,16 @@
 
             home-manager.nixosModules.home-manager
           ];
+
+          overlays = with inputs; [
+            treesitter-kanata.overlays.default
+            nur.overlays.default
+          ];
+
+          libx = import ./lib {
+            inherit inputs;
+            overlays = overlays ++ (import ./overlays);
+          };
         in
         {
           overlays.default = overlays;
