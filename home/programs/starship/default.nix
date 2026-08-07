@@ -2,6 +2,8 @@
 {
   programs.starship = {
     enable = true;
+
+    enableTransience = true;
     settings = {
       add_newline = true;
       format = "$directory$git_branch$git_status$dotnet$line_break$character";
