@@ -46,4 +46,5 @@
   programs.nix-index.enableFishIntegration = true;
   programs.kitty.shellIntegration.enableFishIntegration = true;
   programs.tirith.enableFishIntegration = true;
+  programs.nix-your-shell.enableFishIntegration = true;
 }

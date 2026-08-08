@@ -20,6 +20,7 @@
     "${programsDir}/lazygit"
     "${programsDir}/nix-helper"
     "${programsDir}/nix-index"
+    "${programsDir}/nix-your-shell"
     "${programsDir}/nvim"
     "${programsDir}/packages"
     "${programsDir}/ripgrep"
