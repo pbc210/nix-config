@@ -1,5 +1,6 @@
 {
   imports = [
+    ./lspkind
     ./mini
     ./plenary
     ./snacks

@@ -80,6 +80,11 @@
 
           lualine_c = [
             "encoding"
+            {
+              __unkeyed-1 = "navic";
+              color_correction = "dynamic";
+              navic_opts = null;
+            }
           ];
 
           lualine_x = [ ];

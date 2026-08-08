@@ -1,3 +1,6 @@
 {
-  imports = [ ./lualine.nix ];
+  imports = [
+    ./lualine.nix
+    ./navic.nix
+  ];
 }
