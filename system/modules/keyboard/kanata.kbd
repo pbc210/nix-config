@@ -1,0 +1,86 @@
+(defalias
+  tilda (macro lsft `)  ;; ~ (Tilde)
+  excl  (macro lsft 1)  ;; ! (Exclamation mark)
+  at    (macro lsft 2)  ;; @ (At)
+  hash  (macro lsft 3)  ;; # (Hash / Number sign)
+  dlr   (macro lsft 4)  ;; $ (Dollar)
+  pct   (macro lsft 5)  ;; % (Percent)
+  caret (macro lsft 6)  ;; ^ (Caret)
+  amp   (macro lsft 7)  ;; & (Ampersand)
+  ast   (macro lsft 8)  ;; * (Asterisk)
+  lpar  (macro lsft 9)  ;; ( (Left Parenthesis)
+  rpar  (macro lsft 0)  ;; ) (Right Parenthesis)
+  unds  (macro lsft -)  ;; _ (Underscore)
+  plus  (macro lsft =)  ;; + (Plus)
+
+  lbrace (macro lsft [)  ;; { (Left Brace)
+  rbrace (macro lsft ])  ;; } (Right Brace)
+  pipe   (macro lsft \)  ;; | (Pipe / Vertical bar)
+  colon  (macro lsft ;)  ;; : (Colon)
+  dquo   (macro lsft ')  ;; " (Double Quote)
+  lt     (macro lsft ,)  ;; < (Less than)
+  gt     (macro lsft .)  ;; > (Greater than)
+  quest  (macro lsft /)  ;; ? (Question mark)
+)
+
+(defsrc
+`          1          2          3          4          5          6          7          8          9          0          -          =
+tab        q          w          e          r          t          y          u          i          o          p          [          ]          \
+caps       a          s          d          f          g          h          j          k          l          ;          '          enter
+           z          x          c          v          b          n          m          ,          .          /
+spc
+end
+)
+
+(deflayer programmer-dvorak
+@dlr       @amp       [          @lbrace    @rbrace    @lpar      =          @ast       @rpar      @plus      ]          @excl      @hash
+tab        ;          ,          .          p          y          f          g          c          r          l          /          @at        \
+esc        a          o          e          u          i          d          h          t          n          s          -          enter
+           '          q          j          k          x          b          m          w          v          z
+@spc_ly
+@to_qw
+)
+
+(deflayer programmer-dvorak-shift
+@tilda     @pct       7          5          3          1          9          0          2          4          6          8          `
+tab        @colon     @lt        @gt        p          y          f          g          c          r          l          @quest     @caret     @pipe
+esc        a          o          e          u          i          d          h          t          n          s          @unds      enter
+           @dquo      q          j          k          x          b          m          w          v          z
+@spc_ly
+@to_qw
+)
+;; Press and hold the space bar to activate.
+(deflayer programmer-dvorak-space
+tab        f1         f2         f3         f4         f5         f6         f7         f8         f9         f10        f11       f12
+tab        @tilda     @pct       7          5          3          1          9          0          2          4          6          8          `
+@dlr       @amp       [          @lbrace    @rbrace    @lpar      =          @ast       @rpar      @plus      ]          @excl      @hash
+           @dquo      q          j          k          x          b          m          w          v          z
+spc
+@to_qw
+)
+
+(deflayer qwerty
+`          1          2          3          4          5          6          7          8          9          0          -          =
+tab        q          w          e          r          t          y          u          i          o          p          [          ]          \
+esc        a          s          d          f          g          h          j          k          l          ;          '          enter
+           z          x          c          v          b          n          m          ,          .          /
+@spc_ly
+@to_dv
+)
+
+(deflayer qwerty-shift
+@tilda     @excl      @at        @hash      @dlr       @pct       @caret     @amp       @ast       @lpar      @rpar      @unds      @plus
+tab        q          w          e          r          t          y          u          i          o          p          @lbrace    @rbrace    @pipe
+esc        a          s          d          f          g          h          j          k          l          @colon     @dquo      enter
+           z          x          c          v          b          n          m          @lt        @gt        @quest
+@spc_ly
+@to_dv
+)
+
+(defalias
+  to_dv (layer-switch programmer-dvorak)
+
+  to_qw (layer-switch qwerty)
+spc_ly (tap-hold 200 200 spc (layer-toggle programmer-dvorak-space))
+)
+
